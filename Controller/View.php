@@ -19,5 +19,10 @@ class View {
     
     function goIndex(){
         
+        $file = "View/index.php";
+        
+        if(file_exists($file)){
+            include_once $file;
+        }
     }
 }
