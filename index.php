@@ -11,7 +11,13 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        // put your code here
+        session_start();
+        $filename = 'Controller/Bootstrap.php';
+        if (file_exists($filename)) {
+            require_once $filename;
+            $controller = new Bootstrap();
+        } else
+        echo '<h1>Página en construcción</h1>';
         ?>
     </body>
 </html>

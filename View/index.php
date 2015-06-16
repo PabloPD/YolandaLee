@@ -1,8 +1,13 @@
-<?php
+<!DOCTYPE html>
+<html>
+    <?php include_once 'View/head.php'; ?>
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+    </head>
+    <body >
+        esto es view
+    
+        <script type="text/javascript" src="bs/js/bootstrap.min.js"> </script> 
+    </body>
+</html>
+
 
