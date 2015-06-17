@@ -22,6 +22,7 @@
     <meta name="theme-color" content="#ffffff">
     <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
     <link rel="stylesheet" href="bs/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/yolandalee.css"/>
     <script type="text/javascript" src="js/yolandalee.js"></script>
     <script type="text/javascript" src="js/jquery-ui.js"></script>
     <link rel="stylesheet" href="css/jquery-ui.css"/>
