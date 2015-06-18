@@ -7,42 +7,42 @@
     <header>
         
     </header>
-    <div class="container encabezadotemas">
+    <div class="container-fluid encabezadotemas">
         <div class="row temas">
-            <div class="col-xs-12 col-sm-2 col-md-2 text-center">
-                <spam>Romántico</spam>
+            <div class="col-xs-12 col-sm-2 col-md-2 text-center temamarcado">
+                <spam><b>Romántico</b></spam>
             </div>
-            <div class="col-xs-12 col-sm-2 col-md-2 text-center">
-                <spam>Ciencia-ficción</spam>
+            <div class="col-xs-12 col-sm-2 col-md-2 text-center temamarcado">
+                <spam><b>Ciencia-ficción</b></spam>
             </div>
-            <div class="col-xs-12 col-sm-2 col-md-2 text-center">
-                <spam>Juvenil</spam>
+            <div class="col-xs-12 col-sm-2 col-md-2 text-center temamarcado">
+                <spam><b>Juvenil</b></spam>
             </div>
-            <div class="col-xs-12 col-sm-2 col-md-2 text-center">
-                <spam>Mistério</spam>
+            <div class="col-xs-12 col-sm-2 col-md-2 text-center temamarcado">
+                <spam><b>Mistério</b></spam>
             </div>
-            <div class="col-xs-12 col-sm-2 col-md-2 text-center">
-                <spam>Hechos reales</spam>
+            <div class="col-xs-12 col-sm-2 col-md-2 text-center temamarcado">
+                <spam><b>Hechos reales</b></spam>
             </div>
-            <div class="col-xs-12 col-sm-2 col-md-2 text-center">
-                <spam>Aventuras</spam>
+            <div class="col-xs-12 col-sm-2 col-md-2 text-center temamarcado">
+                <spam><b>Aventuras</b></spam>
             </div>
         </div>
         <div class="row temas">
-            <div class="col-xs-12 col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1 col-lg-offset-1 text-center">
-                <spam>Romántico</spam>
+            <div class="col-xs-12 col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1 col-lg-offset-1 text-center temamarcado">
+                <spam><b>Romántico</b></spam>
             </div>
-            <div class="col-xs-12 col-sm-2 col-md-2 text-center">
-                <spam>Ciencia-ficción</spam>
+            <div class="col-xs-12 col-sm-2 col-md-2 text-center temamarcado">
+                <spam><b>Ciencia-ficción</b></spam>
             </div>
-            <div class="col-xs-12 col-sm-2 col-md-2 text-center">
-                <spam>Todo</spam>
+            <div class="col-xs-12 col-sm-2 col-md-2 text-center temamarcado">
+                <spam><b>Todo</b></spam>
             </div>
-            <div class="col-xs-12 col-sm-2 col-md-2 text-center">
-                <spam>Mistério</spam>
+            <div class="col-xs-12 col-sm-2 col-md-2 text-center temamarcado">
+                <spam><b>Mistério</b></spam>
             </div>
-            <div class="col-xs-12 col-sm-2 col-md-2 text-center">
-                <spam>Hechos reales</spam>
+            <div class="col-xs-12 col-sm-2 col-md-2 text-center temamarcado">
+                <spam><b>Hechos reales</b></spam>
             </div>
         </div>
     </div>
