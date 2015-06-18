@@ -3,7 +3,8 @@ $(function (){
     
     
     $(".temamarcado").click(function (){
-       alert("ho"); 
+       id = $(this).attr("id");
+       alert(id);
     });
     
     
