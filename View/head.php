@@ -28,4 +28,4 @@
     <link rel="stylesheet" href="css/jquery-ui.css"/>
     <link rel="stylesheet" href="css/jquery-ui.theme.css">
 
-<!--tipo de letra : Bradley Hand ITC -->
+<!--tipo de letra : Bradley Hand ITC   , para el fondo de imagen -->
