@@ -4,9 +4,35 @@
 
 </head>
 <body >
-    <header>
-        
+    <header>  
+        <nav class="navbar navbar-default navbar-fixed-top navbar transparent">
+            <div class="container headersize ">
+                <div class="navbar-header ">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1">
+                        <span class="sr-only">Menu</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse  margintopnav navbarcolors" id="navbar-1">
+                    <form action="" class="navbar-form navbar-right" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="search"/>
+                        </div>
+                        <select class="form-group" name="" id="search">
+                            <option value="">.........................................</option>
+                            <option value="">clasificación</option>
+                            <option value="">autor</option>
+                            <option value="">título</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </nav>
     </header>
+    
     <div class="container-fluid encabezadotemas">
         <div class="row temas">
             <div class="col-xs-12 col-sm-2 col-md-2 text-center temamarcado" id="romantico">
@@ -46,6 +72,8 @@
             </div>
         </div>
     </div>
+    
+    
 
     <script type="text/javascript" src="bs/js/bootstrap.min.js"></script> 
 </body>

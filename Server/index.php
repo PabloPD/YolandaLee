@@ -7,22 +7,17 @@ require_once('Functions/webservice_functions.php');
 $server = new soap_server();
 
 // WSDL Configuration
-$server->configureWSDL('KnowFirst WS', 'urn:knowfirstws');
+$server->configureWSDL('yoliLee', 'urn:yoliLeews');
 
 // Register login method
-$server->register('login', // method
-        array('email' => 'xsd:string', 'password' => 'xsd:string'), // input parameters
-        array('result' => 'xsd:int'), // output parameters
-        'urn:knowfirstws', // namespace
-        'urn:knowfirstws#login', // soapaction
+$server->register('getbooks', // method
+        array('data' => 'xsd:string'), // input parameters
+        array('result' => 'xsd:Array'), // output parameters
+        'urn:yoliLeews', // namespace
+        'urn:yoliLeews#getbooks', // soapaction
         'rpc', // style
         'encoded', // use
-        'Method that check if credentials are correct'
-        . ' and user is confirmed.<br>'
-        . 'Return:<br>'
-        . '0 -> credentials are not correct<br>'
-        . '1 -> user not confirmed<br>'
-        . '2 -> correct login' // documentation
+        'Method return books'// documentation
 );
 
 // Use the request to (try to) invoke the service

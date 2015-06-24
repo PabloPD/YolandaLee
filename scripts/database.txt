@@ -1,0 +1,238 @@
+drop database if exists yolibook;
+CREATE DATABASE yolibook;
+use yolibook;
+
+create table tema(
+te_id int primary key auto_increment,
+te_name varchar(50) unique not null
+)engine = InnoDB;
+
+insert into tema values(null,'tema1');
+insert into tema values(null,'tema2');
+insert into tema values(null,'tema3');
+insert into tema values(null,'tema4');
+insert into tema values(null,'tema5');
+insert into tema values(null,'tema6');
+insert into tema values(null,'tema7');
+insert into tema values(null,'tema8');
+insert into tema values(null,'tema9');
+insert into tema values(null,'tema10');
+insert into tema values(null,'tema11');
+
+
+create table autor(
+au_id int primary key auto_increment,
+au_name varchar(150) unique not null
+)engine = InnoDB;
+
+insert into autor values(null,'autor1');
+insert into autor values(null,'autor2');
+insert into autor values(null,'autor3');
+insert into autor values(null,'autor4');
+insert into autor values(null,'autor5');
+insert into autor values(null,'autor6');
+insert into autor values(null,'autor7');
+insert into autor values(null,'autor8');
+insert into autor values(null,'autor9');
+insert into autor values(null,'autor10');
+insert into autor values(null,'autor11');
+insert into autor values(null,'autor12');
+insert into autor values(null,'autor13');
+insert into autor values(null,'autor14');
+insert into autor values(null,'autor15');
+insert into autor values(null,'autor16');
+insert into autor values(null,'autor17');
+insert into autor values(null,'autor18');
+insert into autor values(null,'autor19');
+insert into autor values(null,'autor20');
+
+
+
+create table titulo(
+ti_id int primary key auto_increment,
+ti_name varchar(250) unique not null,
+ti_au_fk_autor int not null,
+foreign key(ti_au_fk_autor) references autor(au_id)
+)engine = InnoDB;
+
+insert into titulo values(null,'titulo 1',1);
+insert into titulo values(null,'titulo 2',1);
+insert into titulo values(null,'titulo 3',2);
+insert into titulo values(null,'titulo 4',2);
+insert into titulo values(null,'titulo 5',3);
+insert into titulo values(null,'titulo 6',3);
+insert into titulo values(null,'titulo 7',4);
+insert into titulo values(null,'titulo 8',4);
+insert into titulo values(null,'titulo 9',5);
+insert into titulo values(null,'titulo 10',5);
+insert into titulo values(null,'titulo 11',6);
+insert into titulo values(null,'titulo 12',6);
+insert into titulo values(null,'titulo 13',7);
+insert into titulo values(null,'titulo 14',7);
+insert into titulo values(null,'titulo 15',8);
+insert into titulo values(null,'titulo 16',8);
+insert into titulo values(null,'titulo 17',9);
+insert into titulo values(null,'titulo 18',9);
+insert into titulo values(null,'titulo 19',10);
+insert into titulo values(null,'titulo 20',10);
+insert into titulo values(null,'titulo 21',11);
+insert into titulo values(null,'titulo 22',11);
+insert into titulo values(null,'titulo 23',12);
+insert into titulo values(null,'titulo 24',12);
+insert into titulo values(null,'titulo 25',13);
+insert into titulo values(null,'titulo 26',13);
+insert into titulo values(null,'titulo 27',14);
+insert into titulo values(null,'titulo 28',14);
+insert into titulo values(null,'titulo 29',15);
+insert into titulo values(null,'titulo 30',15);
+insert into titulo values(null,'titulo 31',16);
+insert into titulo values(null,'titulo 32',16);
+insert into titulo values(null,'titulo 33',17);
+insert into titulo values(null,'titulo 34',17);
+insert into titulo values(null,'titulo 35',18);
+insert into titulo values(null,'titulo 36',18);
+insert into titulo values(null,'titulo 37',19);
+insert into titulo values(null,'titulo 38',19);
+insert into titulo values(null,'titulo 39',20);
+insert into titulo values(null,'titulo 40',20);
+
+
+create table book(
+b_id int primary key auto_increment,
+b_valoracion varchar(2) not null,
+b_comentario text not null,
+b_picture varchar(100) not null,
+b_ti_fk int not null unique,
+b_te_fk int not null,
+foreign key(b_ti_fk) references titulo(ti_id),
+foreign key(b_te_fk) references tema(te_id)
+)engine = InnoDB;
+
+
+insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno ', 'imgprueba',1,1);
+
+insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno ', 'imgprueba',2,1);
+
+insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno ', 'imgprueba',3,2);
+
+insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno ', 'imgprueba',4,3);
+
+insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno ', 'imgprueba',5,4);
+
+insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno ', 'imgprueba',6,5);
+
+insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno ', 'imgprueba',7,6);
+
+insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno ', 'imgprueba',8,7);
+
+insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno ', 'imgprueba',9,6);
+
+insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno ', 'imgprueba',10,5);
+
+insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno ', 'imgprueba',11,4);
+
+insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno ', 'imgprueba',12,3);
+
+insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno ', 'imgprueba',13,1);
+
+insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno ', 'imgprueba',14,2);
+insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno ', 'imgprueba',15,5);
+
+insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno ', 'imgprueba',16,1);
+
+insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno ', 'imgprueba',17,1);
+
+insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno ', 'imgprueba',18,5);
+
+insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno ', 'imgprueba',19,4);
+
+insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno ', 'imgprueba',20,3);
+
+insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno ', 'imgprueba',21,1);
+
+insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno ', 'imgprueba',22,2);
+insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno ', 'imgprueba',23,5);
+
+insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno ', 'imgprueba',24,1);
+
+insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
+Es muy bueno muyyyyyyyy bueno ', 'imgprueba',25,1);
+
+select * from book;
+select b_valoracion, b_comentario, b_picture, ti_name, au_name from book left join titulo on b_ti_fk=ti_id left join autor on ti_au_fk_autor=au_id;
+select b_valoracion, b_comentario, b_picture, ti_name, au_name from book left join titulo on b_ti_fk=ti_id left join autor on ti_au_fk_autor=au_id where b_id=5; 
+
