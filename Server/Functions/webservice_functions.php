@@ -12,8 +12,7 @@ require_once('Functions/global_functions.php');
  */
 function getbooks($email, $password) {
     $dbo = (new ModelPDO())->getDBO();  // Database Object
-    // Get role from user if exists
-    //$password = '62c8ad0a15d9d1ca38d5';
+
     $sth = $dbo->prepare("select b_valoracion, b_comentario, b_picture, ti_name, au_name from book left join titulo on b_ti_fk=ti_id left join autor on ti_au_fk_autor=au_id");
     // Set parameters
     //$sth->execute(array($email, $password));
