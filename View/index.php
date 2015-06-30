@@ -73,6 +73,21 @@
         </div>
     </div>
     
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <?php
+                
+                if(isset($libros)){
+                    print_r($libros);
+                }
+                
+                ?>
+                
+            </div>
+        </div>
+    </div>
+    
     
 
     <script type="text/javascript" src="bs/js/bootstrap.min.js"></script> 

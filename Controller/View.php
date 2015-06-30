@@ -18,8 +18,10 @@ class View {
     }
     
     function goIndex(){
-        
+        include_once 'Controller/Client.php';
         $file = "View/index.php";
+
+        $libros = getallbook();
         
         if(file_exists($file)){
             include_once $file;

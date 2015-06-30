@@ -31,9 +31,6 @@ else {
 
 function getallbook() {
     $client = getClient();
-
-    //$response = $client->__call('getbooks',array("data"));  //Send two inputs strings. {1} DECODED CONTENT {2} FILENAME
-    
-    echo "hola";
-    //print($response);
+    $response = $client->__call('getbooks',array("data")); 
+    return $response;
 }

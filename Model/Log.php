@@ -24,7 +24,7 @@ class Log {
 
         $file = 'php_error.log';
         if(file_exists($file)){
-            error_log($date.' : '.$message.' *****\r \n', 3, $file);
+            error_log($date." : ".$message."\r\n", 3, $file);
         }
         else    echo 'no existe fichero php_errors.log';
     }
@@ -36,7 +36,7 @@ class Log {
 
         $file = 'php_error.log';
         if(file_exists($file)){
-            error_log($date.' : No exist file : '.$message.' *****', 3, $file);
+            error_log($date." : No exist file : ".$message."\r\n", 3, $file);
         }
         else    echo 'no existe fichero php_errors.log';
     }
