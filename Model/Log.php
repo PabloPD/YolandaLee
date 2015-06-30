@@ -17,14 +17,14 @@ class Log {
         
     }
     
-    function missage($message){
+    function message($message){
         
         //date_default_timezone_set('UTC');
         $date= date('l jS \of F Y h:i:s A');
 
         $file = 'php_error.log';
         if(file_exists($file)){
-            error_log($date.' : '.$message.' *****', 3, $file);
+            error_log($date.' : '.$message.' *****\r \n', 3, $file);
         }
         else    echo 'no existe fichero php_errors.log';
     }
@@ -36,7 +36,7 @@ class Log {
 
         $file = 'php_error.log';
         if(file_exists($file)){
-            error_log($date.' : '.$message.' *****', 3, $file);
+            error_log($date.' : No exist file : '.$message.' *****', 3, $file);
         }
         else    echo 'no existe fichero php_errors.log';
     }
