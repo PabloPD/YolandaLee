@@ -17,8 +17,8 @@ class ModelPDO {
 	
         private $host = "localhost";
 	private $db = "yolibook";
-        private $usuari = "root";
-        private $contrasenya = "";
+        private $usuari = "yoliroot";
+        private $contrasenya = "123456";
 	/**
 	 * Nom de la base de dades
 	 * @var string
