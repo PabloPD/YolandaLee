@@ -75,16 +75,45 @@
     
     <div class="container">
         <div class="row">
-            <div class="col-xs-12">
+            
                 <?php
                 
                 if(isset($libros)){
-                    print_r($libros);
+                    
+                    $side = 0;
+                    foreach ($libros as $b) {
+                        
+                        if($side%2==0){
+                            echo '<div class="col-xs-12 col-sm-12 col-md-2 bordearLibro">';
+                            echo '<img src="img/'.$b->picture.'.png" width="125" height="175">';
+                            echo '</div>';
+                            echo '<div class="col-xs-12 col-sm-12 col-md-10 bordearLibro">';
+                            echo '<href class="btn btn-success links">Titulo : '. $b->tittle .'</href>';
+                            echo '<href class="btn btn-primary links">Autor : '. $b->autor .'</href>';
+                            echo '<href class="btn btn-warning links">Valoracion : '. $b->valoration .'</href><br><br>';
+                            echo $b->coment;
+                            echo '</div>';
+                            $side++;
+                        }
+                        else{
+                            echo '<div class="col-xs-12 col-sm-12 col-md-10 bordearLibro">';
+                            echo '<href class="btn btn-success links">Titulo : '. $b->tittle .'</href>';
+                            echo '<href class="btn btn-primary links">Autor : '. $b->autor .'</href>';
+                            echo '<href class="btn btn-warning links">Valoracion : '. $b->valoration .'</href><br><br>';
+                            echo $b->coment;
+                            echo '</div>';
+                            echo '<div class="col-xs-12 col-sm-12 col-md-2 bordearLibro">';
+                            echo '<img src="img/'.$b->picture.'.png" width="125" height="175">';
+                            echo '</div>';
+                            $side++;
+                        }    
+                    }
+                    
+                    //ssprint_r($libros);
                 }
                 
                 ?>
-                
-            </div>
+            
         </div>
     </div>
     

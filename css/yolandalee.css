@@ -1,8 +1,8 @@
 body
 {
 font-family: "barrio-regular";
-background-image: url(../img/fondo.png);
-background-repeat: no-repeat;
+background-image: url(../img/fondoAlpha.png);
+background-repeat: repeat;
 background-position: center 20%;
 margin-top: 10px;
 }
@@ -54,4 +54,16 @@ background-color: rgba(220,225,187,0.7);
 #search
 {
 
+}
+
+.bordearLibro
+{
+height: 185px;
+padding: 5px;
+font-size: 18px;
+}
+
+.links
+{
+margin-right: 20px;    
 }
