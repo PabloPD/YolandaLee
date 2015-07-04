@@ -17,16 +17,18 @@
                 </div>
 
                 <div class="collapse navbar-collapse  margintopnav navbarcolors" id="navbar-1">
-                    <form action="" class="navbar-form navbar-right" role="search">
+                    <form action="Search" method="POST" class="navbar-form navbar-right" role="search">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="search"/>
+                            <input type="text" name="search" class="form-control" placeholder="search"/>
                         </div>
-                        <select class="form-group" name="" id="search">
+                        <select class="form-group" name="filter">
+                            <option value="todo">todo</option>
+                            <option value="clasificación">clasificación</option>
+                            <option value="autor">autor</option>
+                            <option value="título">título</option>
                             <option value="">.........................................</option>
-                            <option value="">clasificación</option>
-                            <option value="">autor</option>
-                            <option value="">título</option>
                         </select>
+                        <input type="submit" class="form-control btn-success" value="search" id="updateBtn" />
                     </form>
                 </div>
             </div>

@@ -12,42 +12,45 @@
  * @author Pablo
  */
 class Bootstrap {
+
     //put your code here
     public function __construct() {
+        
+        if (isset($_POST['url'])) {
 
-            if (isset($_GET['url'])) {
+            $url = $_POST['url'];
+            $url = rtrim($url, '/');
+            $url = explode('/', $url);
 
-                $url = $_GET['url'];
-                $url = rtrim($url, '/');
-                $url = explode('/', $url);
+            print_r($url);
 
-                $file = 'Controller/' . $url[0] . '.php';
+            $file = 'Controller/' . $url[0] . '.php';
 
-                if (file_exists($file)) {
+            if (file_exists($file)) {
 
-                    require $file;
-                    $controller = new $url[0];
+                require $file;
+                $controller = new $url[0];
 
-                    if (!isset($url[1])) {
-                        $controller->goIndex();
-                    } elseif (isset($url[1])) {
+                if (!isset($url[1])) {
+                    $controller->goIndex();
+                } elseif (isset($url[1])) {
 
-                        $controller->{$url[1]}();
-                    }
-                } else {
-                    // This redirect to main page 
-                    header("Location: .");
-                    die();
+                    $controller->{$url[1]}();
                 }
             } else {
-                $file = 'Controller/View.php';
-                if (file_exists($file)) {
-                    require_once $file;
-                    $controller = new View();
-                    $controller->goIndex();
-                } else
-                    echo "View.php doesn't exists";
+                // This redirect to main page 
+                header("Location: .");
+                die();
             }
-        
+        } else {
+            $file = 'Controller/View.php';
+            if (file_exists($file)) {
+                require_once $file;
+                $controller = new View();
+                $controller->goIndex();
+            } else
+                echo "View.php doesn't exists";
+        }
     }
+
 }
