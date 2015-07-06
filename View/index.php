@@ -87,12 +87,13 @@
                         
                         if($side%2==0){
                             echo '<div class="col-xs-12 col-sm-12 col-md-2 bordearLibro">';
-                            echo '<img src="img/'.$b->picture.'.png" width="125" height="175">';
+                            echo '<img src="img/'.$b->picture.'.png" width="140" height="200">';
                             echo '</div>';
                             echo '<div class="col-xs-12 col-sm-12 col-md-10 bordearLibro">';
                             echo '<href class="btn btn-success links">Titulo : '. $b->tittle .'</href>';
                             echo '<href class="btn btn-primary links">Autor : '. $b->autor .'</href>';
-                            echo '<href class="btn btn-warning links">Valoracion : '. $b->valoration .'</href><br><br>';
+                            echo '<href class="btn btn-warning links">Valoracion : '. $b->valoration .'</href>';
+                            echo '<href class="btn btn-warning links">tema : '. $b->tema .'</href><br><br>';
                             echo $b->coment;
                             echo '</div>';
                             $side++;
@@ -101,7 +102,8 @@
                             echo '<div class="col-xs-12 col-sm-12 col-md-10 bordearLibro">';
                             echo '<href class="btn btn-success links">Titulo : '. $b->tittle .'</href>';
                             echo '<href class="btn btn-primary links">Autor : '. $b->autor .'</href>';
-                            echo '<href class="btn btn-warning links">Valoracion : '. $b->valoration .'</href><br><br>';
+                            echo '<href class="btn btn-warning links">Valoracion : '. $b->valoration .'</href>';
+                            echo '<href class="btn btn-warning links">tema : '. $b->tema .'</href><br><br>';
                             echo $b->coment;
                             echo '</div>';
                             echo '<div class="col-xs-12 col-sm-12 col-md-2 bordearLibro">';
