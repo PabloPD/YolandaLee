@@ -21,15 +21,15 @@ class View {
         include_once 'Controller/Client.php';
         $file = "View/index.php";
         
-//        if (isset($_POST['search']))
-//            echo $_POST['search'];
-//        else
-//            echo 'no existe post';
-//        
-//        if (isset($_POST['filter']))
-//            echo $_POST['filter'];
-//        else
-//            echo 'no existe post';
+        if (isset($_POST['search']))
+            echo $_POST['search'];
+        else
+            echo 'no existe post';
+        
+        if (isset($_POST['filter']))
+            echo $_POST['filter'];
+        else
+            echo 'no existe post';
 
         $libros = getallbook();
         

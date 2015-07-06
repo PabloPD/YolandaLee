@@ -17,7 +17,7 @@ class Bootstrap {
     public function __construct() {
         
         if (isset($_POST['url'])) {
-
+ 
             $url = $_POST['url'];
             $url = rtrim($url, '/');
             $url = explode('/', $url);
