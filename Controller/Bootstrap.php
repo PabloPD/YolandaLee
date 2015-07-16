@@ -16,31 +16,19 @@ class Bootstrap {
     //put your code here
     public function __construct() {
         
-        if (isset($_POST['url'])) {
+        if (isset($_GET['url'])) {
  
-            $url = $_POST['url'];
+            $url = $_GET['url'];
             $url = rtrim($url, '/');
             $url = explode('/', $url);
 
             print_r($url);
 
-            $file = 'Controller/' . $url[0] . '.php';
+            $file = 'Controlle/' . $url[0] . '.php';
 
             if (file_exists($file)) {
+                echo 'fichero';
 
-                require $file;
-                $controller = new $url[0];
-
-                if (!isset($url[1])) {
-                    $controller->goIndex();
-                } elseif (isset($url[1])) {
-
-                    $controller->{$url[1]}();
-                }
-            } else {
-                // This redirect to main page 
-                header("Location: .");
-                die();
             }
         } else {
             $file = 'Controller/View.php';
@@ -50,6 +38,7 @@ class Bootstrap {
                 $controller->goIndex();
             } else
                 echo "View.php doesn't exists";
+            echo 'aki';
         }
     }
 
