@@ -92,6 +92,13 @@
                 ?>
             
         </div>
+        
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <a href="mas" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-left separatorpages" aria-hidden="true"></span></a> <a href="mas" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-right separatorpages" aria-hidden="true"></span></a>
+            </div> 
+            <br><br><br>
+        </div>
     </div>
     
     
