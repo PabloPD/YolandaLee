@@ -17,7 +17,7 @@
                 </div>
 
                 <div class="collapse navbar-collapse  margintopnav navbarcolors" id="navbar-1">
-                    <form action="Search" method="POST" class="navbar-form navbar-right" role="search">
+                    <form action="./Search" method="POST" class="navbar-form navbar-right" role="search">
                         <div class="form-group">
                             <input type="text" name="search" class="form-control" placeholder="search"/>
                         </div>
@@ -26,7 +26,13 @@
                             <option value="clasificación">clasificación</option>
                             <option value="autor">autor</option>
                             <option value="título">título</option>
-                            <option value="">.........................................</option>
+                            <?php
+                            foreach ($temas as $t) {
+                                
+                                echo '<option value="'.$t->name.'">'.$t->name.'</option>';
+                                
+                            }
+                            ?>
                         </select>
                         <input type="submit" class="form-control btn-success" value="search" id="updateBtn" />
                     </form>
@@ -35,54 +41,19 @@
         </nav>
     </header>
     
-    <div class="container-fluid encabezadotemas">
-        <div class="row temas">
-            <div class="col-xs-12 col-sm-2 col-md-2 text-center temamarcado" id="romantico">
-                <spam><b>Romántico</b></spam>
-            </div>
-            <div class="col-xs-12 col-sm-2 col-md-2 text-center temamarcado" id="ficcion">
-                <spam><b>Ciencia-ficción</b></spam>
-            </div>
-            <div class="col-xs-12 col-sm-2 col-md-2 text-center temamarcado" id="juvenil">
-                <spam><b>Juvenil</b></spam>
-            </div>
-            <div class="col-xs-12 col-sm-2 col-md-2 text-center temamarcado" id="ficcion">
-                <spam><b>Mistério</b></spam>
-            </div>
-            <div class="col-xs-12 col-sm-2 col-md-2 text-center temamarcado" id="ficcion">
-                <spam><b>Hechos reales</b></spam>
-            </div>
-            <div class="col-xs-12 col-sm-2 col-md-2 text-center temamarcado" id="ficcion">
-                <spam><b>Aventuras</b></spam>
-            </div>
-        </div>
-        <div class="row temas">
-            <div class="col-xs-12 col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1 col-lg-offset-1 text-center temamarcado">
-                <spam><b>Romántico</b></spam>
-            </div>
-            <div class="col-xs-12 col-sm-2 col-md-2 text-center temamarcado" id="ficcion">
-                <spam><b>Ciencia-ficción</b></spam>
-            </div>
-            <div class="col-xs-12 col-sm-2 col-md-2 text-center temamarcado" id="ficcion">
-                <spam><b>Todo</b></spam>
-            </div>
-            <div class="col-xs-12 col-sm-2 col-md-2 text-center temamarcado" id="ficcion">
-                <spam><b>Mistério</b></spam>
-            </div>
-            <div class="col-xs-12 col-sm-2 col-md-2 text-center temamarcado" id="ficcion">
-                <spam><b>Hechos reales</b></spam>
-            </div>
-        </div>
-    </div>
-    
     <div class="container">
         <div class="row">
             
                 <?php
                 
                 if(isset($libros)){
+
+                    if(!isset($_SESSION['num_pag'])){
+                        $_SESSION['num_pag']=10;
+                    }
                     
-                    $side = 0;
+                    
+                    $side = $_SESSION['num_pag']-10;
                     foreach ($libros as $b) {
                         
                         if($side%2==0){
@@ -97,6 +68,7 @@
                             echo $b->coment;
                             echo '</div>';
                             $side++;
+                            if($side >= $_SESSION['num_pag']) break;
                         }
                         else{
                             echo '<div class="col-xs-12 col-sm-12 col-md-10 bordearLibro">';
@@ -110,6 +82,7 @@
                             echo '<img src="img/'.$b->picture.'.png" width="125" height="175">';
                             echo '</div>';
                             $side++;
+                            if($side >= $_SESSION['num_pag']) break;
                         }    
                     }
                     

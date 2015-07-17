@@ -22,9 +22,29 @@ class View {
         $file = "View/index.php";
 
         $libros = getallbook();
+        $temas = getalltemas();
+        $_SESSION['count_libros']=  count($libros);
         
         if(file_exists($file)){
             include_once $file;
         }
+    }
+    
+    function goSearch(){
+        include_once 'Controller/Client.php';
+        $file = "View/index.php";
+        echo $_POST['search'];
+        echo $_POST['filter'];
+        $libros = getallbook();
+        $temas = getalltemas();
+        $_SESSION['count_libros']=  count($libros);
+        
+        if(file_exists($file)){
+            include_once $file;
+        }
+    }
+    
+    function getTemas(){
+        
     }
 }

@@ -34,3 +34,9 @@ function getallbook() {
     $response = $client->__call('getbooks',array("data")); 
     return $response;
 }
+
+function getalltemas() {
+    $client = getClient();
+    $response = $client->__call('gettemas',array("data")); 
+    return $response;
+}

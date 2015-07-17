@@ -22,12 +22,26 @@ class Bootstrap {
             $url = rtrim($url, '/');
             $url = explode('/', $url);
 
-            print_r($url);
-
-            $file = 'Controlle/' . $url[0] . '.php';
+            $file = 'Controller/View.php';
 
             if (file_exists($file)) {
-                echo 'fichero';
+                
+                require_once $file;
+                $controller = new View();
+                
+                if(isset($url[2])){
+                    echo '2';
+                }
+                elseif (isset($url[1])) {
+                    echo '1';
+                }
+                elseif (isset($url[0])) {
+                    $controller->goSearch();
+                }
+                else{
+                    
+                    $controller->goIndex();
+                }
 
             }
         } else {

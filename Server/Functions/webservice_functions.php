@@ -37,3 +37,28 @@ function getbooks($data) {
     }
     return $array;
 }
+
+
+function getTemas($data) {
+    
+    //$log = new Log();
+    //$log->message("Accede a getbooks");
+    $dbo = (new ModelPDO())->getDBO();  // Database Object
+
+    $sth = $dbo->query("select te_name from tema");
+    
+    // Set parameters
+    $result = $sth->fetchAll();
+
+    $array = array();
+    
+    foreach ($result as $value) {
+        
+        $book = array(
+            "name" => $value['te_name'],
+        );
+        
+        array_push($array, $book);
+    }
+    return $array;
+}

@@ -20,6 +20,16 @@ $server->register('getbooks', // method
         'Method return books'// documentation
 );
 
+$server->register('gettemas', // method
+        array('data' => 'xsd:string'), // input parameters
+        array('result' => 'xsd:Array'), // output parameters
+        'urn:yoliLeews', // namespace
+        'urn:yoliLeews#gettemas', // soapaction
+        'rpc', // style
+        'encoded', // use
+        'Method return temas'// documentation
+);
+
 // Use the request to (try to) invoke the service
 $HTTP_RAW_POST_DATA = isset($HTTP_RAW_POST_DATA) ? $HTTP_RAW_POST_DATA : '';
 $server->service($HTTP_RAW_POST_DATA);
