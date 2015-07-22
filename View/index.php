@@ -22,10 +22,10 @@
                             <input type="text" name="search" class="form-control" placeholder="search"/>
                         </div>
                         <select class="form-group" name="filter">
-                            <option value="todo">todo</option>
-                            <option value="clasificación">clasificación</option>
-                            <option value="autor">autor</option>
-                            <option value="título">título</option>
+                            <option value="todo">Todo</option>
+                            <option value="clasificación">Clasificación</option>
+                            <option value="autor">Autor</option>
+                            <option value="título">Título</option>
                             <?php
                             foreach ($temas as $t) {
                                 
@@ -40,23 +40,33 @@
             </div>
         </nav>
     </header>
-    
+    <br>
+    <br>
+    <br>
     <div class="container">
         <div class="row">
             
                 <?php
                 
-                if(isset($libros)){
+                if(isset($_SESSION['libros'])){
+                    
+                    
+                    if(isset($_SESSION['not_found']) AND !$_SESSION['not_found']==''){
+                        echo '<div class="col-xs-12 col-sm-12 col-md-12 bordearLibro">';
+                        echo $_SESSION['not_found'];
+                        echo '<br></div>';
+                    }
 
                     if(!isset($_SESSION['num_pag'])){
                         $_SESSION['num_pag']=10;
                     }
+
+                    $_SESSION['contar_libs_pag'] = 0;
                     
-                    
-                    $side = $_SESSION['num_pag']-10;
-                    foreach ($libros as $b) {
-                        
-                        if($side%2==0){
+                    foreach ($_SESSION['libros'] as $b) {
+
+                        if($_SESSION['contar_libs_pag'] >= $_SESSION['num_pag'] - 10 AND $_SESSION['contar_libs_pag'] < $_SESSION['num_pag']){
+                            if($_SESSION['contar_libs_pag']%2==0){
                             echo '<div class="col-xs-12 col-sm-12 col-md-2 bordearLibro">';
                             echo '<img src="img/'.$b->picture.'.png" width="140" height="200">';
                             echo '</div>';
@@ -67,27 +77,26 @@
                             echo '<href class="btn btn-warning links">tema : '. $b->tema .'</href><br><br>';
                             echo $b->coment;
                             echo '</div>';
-                            $side++;
-                            if($side >= $_SESSION['num_pag']) break;
+                            }
+                            else{
+                                echo '<div class="col-xs-12 col-sm-12 col-md-10 bordearLibro">';
+                                echo '<href class="btn btn-success links">Titulo : '. $b->tittle .'</href>';
+                                echo '<href class="btn btn-primary links">Autor : '. $b->autor .'</href>';
+                                echo '<href class="btn btn-warning links">Valoracion : '. $b->valoration .'</href>';
+                                echo '<href class="btn btn-warning links">tema : '. $b->tema .'</href><br><br>';
+                                echo $b->coment;
+                                echo '</div>';
+                                echo '<div class="col-xs-12 col-sm-12 col-md-2 bordearLibro">';
+                                echo '<img src="img/'.$b->picture.'.png" width="125" height="175">';
+                                echo '</div>';
+                            } 
                         }
-                        else{
-                            echo '<div class="col-xs-12 col-sm-12 col-md-10 bordearLibro">';
-                            echo '<href class="btn btn-success links">Titulo : '. $b->tittle .'</href>';
-                            echo '<href class="btn btn-primary links">Autor : '. $b->autor .'</href>';
-                            echo '<href class="btn btn-warning links">Valoracion : '. $b->valoration .'</href>';
-                            echo '<href class="btn btn-warning links">tema : '. $b->tema .'</href><br><br>';
-                            echo $b->coment;
-                            echo '</div>';
-                            echo '<div class="col-xs-12 col-sm-12 col-md-2 bordearLibro">';
-                            echo '<img src="img/'.$b->picture.'.png" width="125" height="175">';
-                            echo '</div>';
-                            $side++;
-                            if($side >= $_SESSION['num_pag']) break;
-                        }    
+                          $_SESSION['contar_libs_pag']++; 
                     }
-                    
+                    $_SESSION['not_found']='';
                     //ssprint_r($libros);
                 }
+
                 
                 ?>
             
@@ -95,7 +104,7 @@
         
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <a href="mas" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-left separatorpages" aria-hidden="true"></span></a> <a href="mas" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-right separatorpages" aria-hidden="true"></span></a>
+                <a href="Less" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-left separatorpages" aria-hidden="true"></span></a> <a href="More" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-right separatorpages" aria-hidden="true"></span></a>
             </div> 
             <br><br><br>
         </div>

@@ -36,7 +36,13 @@ class Bootstrap {
                     echo '1';
                 }
                 elseif (isset($url[0])) {
-                    $controller->goSearch();
+                    if($url[0] == 'Search'){
+                        $controller->{$_POST['filter']}($_POST['search']);
+                    }
+                    else{
+                        $controller->{$url[0]}();
+                    }
+                    
                 }
                 else{
                     

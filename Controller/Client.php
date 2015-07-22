@@ -40,3 +40,21 @@ function getalltemas() {
     $response = $client->__call('gettemas',array("data")); 
     return $response;
 }
+
+function getallautor($nameAutor) {
+    $client = getClient();
+    $response = $client->__call('getautor',array($nameAutor)); 
+    return $response;
+}
+
+function getalltitulo($nameTitle) {
+    $client = getClient();
+    $response = $client->__call('gettemas',array("data")); 
+    return $response;
+}
+
+function getallclasificacion() {
+    $client = getClient();
+    $response = $client->__call('gettemas',array("data")); 
+    return $response;
+}
