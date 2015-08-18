@@ -91,13 +91,47 @@
                                 echo '</div>';
                             } 
                         }
+                        else{
+                            if($_SESSION['num_pag'] - 10 > 0) $_SESSION['disableless'] = false;
+                            else $_SESSION['disableless'] = true;
+                            
+                            if($_SESSION['num_pag']+10 < $_SESSION['count_libros'] +10) $_SESSION['disablemore'] = false;
+                            else $_SESSION['disablemore'] = true;
+                        }
                           $_SESSION['contar_libs_pag']++; 
                     }
                     $_SESSION['not_found']='';
-                    //ssprint_r($libros);
                 }
 
+                if($_SESSION['disableless']){
+                ?>
+            
+        </div>
+        
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <a href="Less" class="btn btn-lg disabled"><span class="glyphicon glyphicon-triangle-left separatorpages" aria-hidden="true"></span></a> <a href="More" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-right separatorpages" aria-hidden="true"></span></a>
+            </div> 
+            <br><br><br>
+        </div>
+        <?php
+                }
                 
+        if($_SESSION['disablemore']){
+                ?>
+            
+        </div>
+        
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <a href="Less" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-left separatorpages" aria-hidden="true"></span></a> <a href="More" class="btn btn-lg disabled"><span class="glyphicon glyphicon-triangle-right separatorpages" aria-hidden="true"></span></a>
+            </div> 
+            <br><br><br>
+        </div>
+        <?php
+                }
+        if(!$_SESSION['disableless'] AND !$_SESSION['disablemore']){
+            
                 ?>
             
         </div>
@@ -108,6 +142,10 @@
             </div> 
             <br><br><br>
         </div>
+        <?php
+                }
+        
+        ?>
     </div>
     
     
