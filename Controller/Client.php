@@ -6,6 +6,7 @@
  */
 function getClient() {
     //$wsdl="http://www.knowfirst.me/server/index.php?wsdl";  // SOAP Server
+    //$wsdl="http://localhost:8080/YolandaLee/server/index.php?wsdl";  // SOAP Server
     $wsdl="http://localhost/YolandaLee/server/index.php?wsdl";  // SOAP Server
     $client=new soapclient($wsdl) or die("Error");
     return $client;
@@ -49,7 +50,7 @@ function getallautor($nameAutor) {
 
 function getalltitulo($nameTitle) {
     $client = getClient();
-    $response = $client->__call('gettemas',array("data")); 
+    $response = $client->__call('gettitulos',array($nameTitle)); 
     return $response;
 }
 

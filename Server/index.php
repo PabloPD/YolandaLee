@@ -21,7 +21,7 @@ $server->register('getbooks', // method
 );
 
 $server->register('gettemas', // method
-        array('data' => 'xsd:string'), // input parameters
+        array('gettema' => 'xsd:string'), // input parameters
         array('result' => 'xsd:Array'), // output parameters
         'urn:yoliLeews', // namespace
         'urn:yoliLeews#gettemas', // soapaction
@@ -38,6 +38,16 @@ $server->register('getautor', // method
         'rpc', // style
         'encoded', // use
         'Method return author`s books'// documentation
+);
+
+$server->register('gettitulos', // method
+        array('gettittle' => 'xsd:string'), // input parameters
+        array('result' => 'xsd:Array'), // output parameters
+        'urn:yoliLeews', // namespace
+        'urn:yoliLeews#gettitulos', // soapaction
+        'rpc', // style
+        'encoded', // use
+        'Method return tittles'// documentation
 );
 
 // Use the request to (try to) invoke the service
