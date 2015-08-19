@@ -63,6 +63,9 @@ class View {
         }
     }
     
+    /*
+     * Creado en 2puesto
+     */
     function Titulo($nameTitulo){
         include_once 'Controller/Client.php';
         $file = "View/index.php";
