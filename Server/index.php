@@ -37,7 +37,7 @@ $server->register('getautor', // method
         'urn:yoliLeews#getautor', // soapaction
         'rpc', // style
         'encoded', // use
-        'Method return author`s books'// documentation
+        'Method return authors books'// documentation
 );
 
 $server->register('gettitulos', // method

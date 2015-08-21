@@ -68,13 +68,13 @@ function getautor($nameAutor) {
 }
 
 
-function getTemas($gettema) {
+function gettemas($gettema) {
     
     //$log = new Log();
     //$log->message("Accede a getbooks");
     $dbo = (new ModelPDO())->getDBO();  // Database Object
 
-    $sth = $dbo->query("select b_valoracion, b_comentario, b_picture,te_name, ti_name, au_name from book left join tema on b_te_fk=te_id where te_name = '$gettema' left join titulo on b_ti_fk=ti_id left join autor on ti_au_fk_autor=au_id");
+    $sth = $dbo->query("select te_name from tema order by te_name");
     
     // Set parameters
     $result = $sth->fetchAll();
@@ -84,12 +84,7 @@ function getTemas($gettema) {
     foreach ($result as $value) {
         
         $book = array(
-            "valoration" => $value['b_valoracion'],
-            "coment" => $value['b_comentario'],
-            "picture" => $value['b_picture'],
-            "tittle" => $value['ti_name'],
-            "autor" => $value['au_name'],
-            "tema" => $value['te_name'],
+            "name" => $value['te_name'],
         );
         
         array_push($array, $book);
