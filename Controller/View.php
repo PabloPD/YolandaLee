@@ -103,7 +103,7 @@ class View {
     
     function More(){
         $file = "View/index.php";
-
+        cogerTemas();
         if($_SESSION['num_pag'] + 10 < $_SESSION['count_libros'] + 10) $_SESSION['num_pag'] = $_SESSION['num_pag'] + 10;
         
         if(file_exists($file)){
@@ -113,11 +113,17 @@ class View {
     
     function Less(){
         $file = "View/index.php";
+        cogerTemas();
         if($_SESSION['num_pag'] - 10 <= 0) $_SESSION['num_pag'] = 10;
         else $_SESSION['num_pag'] = $_SESSION['num_pag'] - 10;
         
         if(file_exists($file)){
             include_once $file;
         }
+    }
+    
+    function cogerTemas(){
+        include_once 'Controller/Client.php';
+        $temas = getalltemas();
     }
 }

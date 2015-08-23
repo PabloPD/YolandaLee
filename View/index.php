@@ -23,19 +23,23 @@
                         </div>
                         <select class="form-group" name="filter">
                             <option value="todo">Todo</option>
-                            <option value="clasificación">Clasificación</option>
                             <option value="autor">Autor</option>
-                            <option value="título">Título</option>
-                            <?php
-                            foreach ($temas as $t) {
-                                
-                                echo '<option value="'.$t->name.'">'.$t->name.'</option>';
-                                
-                            }
-                            ?>
+                            <option value="titulo">Título</option>
                         </select>
                         <input type="submit" class="form-control btn-success" value="search" id="updateBtn" />
                     </form>
+                    <div>
+                        <?php
+                            foreach ($temas as $t) {
+                                
+                                echo '<a href="./Tema/'.$t->name.'" style="font-size:'.rand(14, 28).'px;color:rgb('.rand(100, 250).','.rand(50, 180).','.rand(1, 150).');"> '.$t->name.'  </a>';
+                                
+                            }
+                            ?>
+                    </div>
+                    <div>
+                        <br>Clasificación <a href="./Clasificacion/az"> A-Z </a> / <a href="./Clasificacion/za"> Z-A </a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -45,7 +49,7 @@
     <br>
     <div class="container">
         <div class="row">
-            
+            <br>    
                 <?php
                 
                 if(isset($_SESSION['libros'])){
