@@ -54,6 +54,18 @@ function getalltitulo($nameTitle) {
     return $response;
 }
 
+function getallsearch($option) {
+    $client = getClient();
+    $response = $client->__call('getall',array($option)); 
+    return $response;
+}
+
+function getbooksTheme($themes) {
+    $client = getClient();
+    $response = $client->__call('getbooksTemas',array($themes)); 
+    return $response;
+}
+
 function getallclasificacion() {
     $client = getClient();
     $response = $client->__call('gettemas',array("data")); 

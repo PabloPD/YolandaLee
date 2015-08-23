@@ -50,6 +50,26 @@ $server->register('gettitulos', // method
         'Method return tittles'// documentation
 );
 
+$server->register('getall', // method
+        array('getoption' => 'xsd:string'), // input parameters
+        array('result' => 'xsd:Array'), // output parameters
+        'urn:yoliLeews', // namespace
+        'urn:yoliLeews#getall', // soapaction
+        'rpc', // style
+        'encoded', // use
+        'Method return tittles'// documentation
+);
+
+$server->register('getbookstemas', // method
+        array('getthemes' => 'xsd:string'), // input parameters
+        array('result' => 'xsd:Array'), // output parameters
+        'urn:yoliLeews', // namespace
+        'urn:yoliLeews#getbookstemas', // soapaction
+        'rpc', // style
+        'encoded', // use
+        'Method return tittles'// documentation
+);
+
 // Use the request to (try to) invoke the service
 $HTTP_RAW_POST_DATA = isset($HTTP_RAW_POST_DATA) ? $HTTP_RAW_POST_DATA : '';
 $server->service($HTTP_RAW_POST_DATA);

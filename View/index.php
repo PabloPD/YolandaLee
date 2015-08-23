@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <?php include_once 'View/head.php'; ?>
+    <?php 
+    include_once 'View/head.php'; 
+    ?>
 
 </head>
 <body >
@@ -38,7 +40,7 @@
                             ?>
                     </div>
                     <div>
-                        <br>Clasificación <a href="./Clasificacion/az"> A-Z </a> / <a href="./Clasificacion/za"> Z-A </a>
+                        <br>Clasificación categoría <a href="./Clasificacion/az"> A-Z </a> / <a href="./Clasificacion/za"> Z-A </a>
                     </div>
                 </div>
             </div>

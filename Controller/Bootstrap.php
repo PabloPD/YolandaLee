@@ -33,7 +33,7 @@ class Bootstrap {
                     echo '2';
                 }
                 elseif (isset($url[1])) {
-                    echo '1';
+                    $controller->{$url[0]}($url[1]);
                 }
                 elseif (isset($url[0])) {
                     if($url[0] == 'Search'){
