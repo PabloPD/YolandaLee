@@ -30,6 +30,19 @@ class View {
         }
     }
     
+    function goIndexUrl(){
+        include_once 'Controller/Client.php';
+        $file = "View/temas.php";
+
+        $_SESSION['libros'] = getallbook();
+        $temas = getalltemas();
+        $_SESSION['count_libros']=  count($_SESSION['libros']);
+        
+        if(file_exists($file)){
+            include_once $file;
+        }
+    }
+    
     function Autor($nameAutor){
         include_once 'Controller/Client.php';
         $file = "View/index.php";
@@ -102,14 +115,13 @@ class View {
     
     function Tema($theme){
         include_once 'Controller/Client.php';
-        $file = "View/index.php";
-        
+        $file = "View/temas.php";
         $_SESSION['libros'] = getbooksTheme($theme);
         $temas = getalltemas();
         $_SESSION['count_libros'] = count($_SESSION['libros']);
         if($_SESSION['count_libros']==0){
             $_SESSION['not_found']='No hay resultados con esa busqueda';
-            $this->goIndex ();
+            $this->goIndexUrl();
             return;
         }
         else{
@@ -122,15 +134,20 @@ class View {
     }
     
     
-    
-    function goClasificacion(){
+    function Clasificacion($option){
         include_once 'Controller/Client.php';
-        $file = "View/index.php";
-        echo $_POST['search'];
-        echo $_POST['filter'];
-        $_SESSION['libros'] = getallbook();
+        $file = "View/temas.php";
+        $_SESSION['libros'] = getbooksTheme($theme);
         $temas = getalltemas();
-        $_SESSION['count_libros']=  count($_SESSION['libros']);
+        $_SESSION['count_libros'] = count($_SESSION['libros']);
+        if($_SESSION['count_libros']==0){
+            $_SESSION['not_found']='No hay resultados con esa busqueda';
+            $this->goIndexUrl();
+            return;
+        }
+        else{
+            $_SESSION['not_found']='';
+        }
         
         if(file_exists($file)){
             include_once $file;

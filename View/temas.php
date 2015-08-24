@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
     <?php 
-    include_once 'View/head.php'; 
+    include_once 'View/headurl.php'; 
     ?>
-<link rel="stylesheet" href="css/yolandalee.css"/>
 </head>
 <body>
     <header>  
@@ -19,7 +18,7 @@
                 </div>
 
                 <div class="collapse navbar-collapse  margintopnav navbarcolors" id="navbar-1">
-                    <form action="./Search" method="POST" class="navbar-form navbar-right" role="search">
+                    <form action="http://localhost/YolandaLee/Search" method="POST" class="navbar-form navbar-right" role="search">
                         <div class="form-group">
                             <input type="text" name="search" class="form-control" placeholder="search"/>
                         </div>
@@ -34,13 +33,13 @@
                         <?php
                             foreach ($temas as $t) {
                                 
-                                echo '<a href="./Tema/'.$t->name.'" style="font-size:'.rand(14, 28).'px;color:rgb('.rand(100, 250).','.rand(50, 180).','.rand(1, 150).');"> '.$t->name.'  </a>';
+                                echo '<a href="./'.$t->name.'" style="font-size:'.rand(14, 28).'px;color:rgb('.rand(100, 250).','.rand(50, 180).','.rand(1, 150).');"> '.$t->name.'  </a>';
                                 
                             }
                             ?>
                     </div>
                     <div>
-                        <br>Clasificación categoría <a href="./Clasificacion/az"> A-Z </a> / <a href="./Clasificacion/za"> Z-A </a>
+                        <br>Clasificación categoría <a href="http://localhost/YolandaLee/Clasificacion/az"> A-Z </a> / <a href="http://localhost/YolandaLee/Clasificacion/za"> Z-A </a>
                     </div>
                 </div>
             </div>
@@ -74,7 +73,7 @@
                         if($_SESSION['contar_libs_pag'] >= $_SESSION['num_pag'] - 10 AND $_SESSION['contar_libs_pag'] < $_SESSION['num_pag']){
                             if($_SESSION['contar_libs_pag']%2==0){
                             echo '<div class="col-xs-12 col-sm-12 col-md-2 bordearLibro">';
-                            echo '<img src="img/'.$b->picture.'.png" width="140" height="200">';
+                            echo '<img src="http://localhost/YolandaLee/img/'.$b->picture.'.png" width="140" height="200">';
                             echo '</div>';
                             echo '<div class="col-xs-12 col-sm-12 col-md-10 bordearLibro">';
                             echo '<href class="btn btn-success links">Titulo : '. $b->tittle .'</href>';
@@ -159,5 +158,7 @@
     <script type="text/javascript" src="bs/js/bootstrap.min.js"></script> 
 </body>
 </html>
+
+
 
 
