@@ -19,7 +19,7 @@ class View {
     
     function goIndex(){
         include_once 'Controller/Client.php';
-        $file = "View/index.php";
+        $file = "View/newindex.php";
 
         $_SESSION['libros'] = getallbook();
         $temas = getalltemas();
@@ -158,7 +158,7 @@ class View {
         $file = "View/index.php";
         include_once 'Controller/Client.php';
         $temas = getalltemas();
-        if($_SESSION['num_pag'] + 10 < $_SESSION['count_libros'] + 10) $_SESSION['num_pag'] = $_SESSION['num_pag'] + 10;
+        if($_SESSION['num_pag'] + 9 < $_SESSION['count_libros'] + 9) $_SESSION['num_pag'] = $_SESSION['num_pag'] + 9;
         
         if(file_exists($file)){
             include_once $file;
@@ -169,8 +169,8 @@ class View {
         $file = "View/index.php";
         include_once 'Controller/Client.php';
         $temas = getalltemas();
-        if($_SESSION['num_pag'] - 10 <= 0) $_SESSION['num_pag'] = 10;
-        else $_SESSION['num_pag'] = $_SESSION['num_pag'] - 10;
+        if($_SESSION['num_pag'] - 9 <= 0) $_SESSION['num_pag'] = 9;
+        else $_SESSION['num_pag'] = $_SESSION['num_pag'] - 9;
         
         if(file_exists($file)){
             include_once $file;
