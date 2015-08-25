@@ -13,6 +13,8 @@
  */
 class View {
     //put your code here
+    private $numLibrosPagina = 6;
+    
     public function __construct() {
         
     }
@@ -155,10 +157,10 @@ class View {
     }
     
     function More(){
-        $file = "View/index.php";
+        $file = "View/newindex.php";
         include_once 'Controller/Client.php';
         $temas = getalltemas();
-        if($_SESSION['num_pag'] + 9 < $_SESSION['count_libros'] + 9) $_SESSION['num_pag'] = $_SESSION['num_pag'] + 9;
+        if($_SESSION['num_pag'] + $this->numLibrosPagina < $_SESSION['count_libros'] + $this->numLibrosPagina) $_SESSION['num_pag'] = $_SESSION['num_pag'] + $this->numLibrosPagina;
         
         if(file_exists($file)){
             include_once $file;
@@ -166,11 +168,11 @@ class View {
     }
     
     function Less(){
-        $file = "View/index.php";
+        $file = "View/newindex.php";
         include_once 'Controller/Client.php';
         $temas = getalltemas();
-        if($_SESSION['num_pag'] - 9 <= 0) $_SESSION['num_pag'] = 9;
-        else $_SESSION['num_pag'] = $_SESSION['num_pag'] - 9;
+        if($_SESSION['num_pag'] - $this->numLibrosPagina <= 0) $_SESSION['num_pag'] = $this->numLibrosPagina;
+        else $_SESSION['num_pag'] = $_SESSION['num_pag'] - $this->numLibrosPagina;
         
         if(file_exists($file)){
             include_once $file;

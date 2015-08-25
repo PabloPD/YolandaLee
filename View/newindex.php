@@ -50,7 +50,7 @@
     <br>
     <br>
     <div class="container">
-        <div class="row bordear">
+        <div class="row">
             <br>    
                 <?php
                 
@@ -63,28 +63,29 @@
                     }
 
                     if(!isset($_SESSION['num_pag'])){
-                        $_SESSION['num_pag']=9;
+                        $_SESSION['num_pag']=6;
                     }
 
                     $_SESSION['contar_libs_pag'] = 0;
                     
                     foreach ($_SESSION['libros'] as $b) {
-                        echo $b->tittle;
-                        if($_SESSION['contar_libs_pag'] >= $_SESSION['num_pag'] - 9 AND $_SESSION['contar_libs_pag'] < $_SESSION['num_pag']){
-                            echo '<div class="col-xs-12 col-sm-4 col-md-4 bordearLibro bordear ">';
-                            echo '<img src="img/'.$b->picture.'.png" width="285" height="130"><br>';
-                            echo '<a href="#" class="links">Titulo : '. $b->tittle .'</a><br>';
-                            echo '<a href="#" class="links">Autor : '. $b->autor .'</a><br>';
-                            echo '<a href="#" class="links">Valoracion : '. $b->valoration .'</a><br>';
-                            echo '<a href="#" class="links">tema : '. $b->tema .'</a><br><br>';
+
+                        if($_SESSION['contar_libs_pag'] >= $_SESSION['num_pag'] - 6 AND $_SESSION['contar_libs_pag'] < $_SESSION['num_pag']){
+                            echo '<div class="col-xs-12 col-sm-5 col-md-5 bordearLibro col-sm-push-1" >';
+                            echo '<br>';
+                            echo '<div class="links">Titulo : '. $b->tittle .'<br>';
+                            echo 'Autor : '. $b->autor .'<br>';
+                            echo 'Valoracion : '. $b->valoration .'<br>';
+                            echo 'tema : '. $b->tema .'</div><br><br>';
                             echo $b->coment;
+                            echo '<div class="fondoLibro bordearLibro"></div>';
                             echo '</div>';
                         }
                         else{
-                            if($_SESSION['num_pag'] - 9 > 0) $_SESSION['disableless'] = false;
+                            if($_SESSION['num_pag'] - 6 > 0) $_SESSION['disableless'] = false;
                             else $_SESSION['disableless'] = true;
                             
-                            if($_SESSION['num_pag']+9 < $_SESSION['count_libros'] +10) $_SESSION['disablemore'] = false;
+                            if($_SESSION['num_pag']+6 < $_SESSION['count_libros'] +6) $_SESSION['disablemore'] = false;
                             else $_SESSION['disablemore'] = true;
                         }
                           $_SESSION['contar_libs_pag']++;
@@ -104,7 +105,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <a href="Less" class="btn btn-lg disabled"><span class="glyphicon glyphicon-triangle-left separatorpages" aria-hidden="true"></span></a> <a href="More" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-right separatorpages" aria-hidden="true"></span></a>
             </div> 
-            <br><br><br>
+            <br><br>
         </div>
         <?php
                 }
@@ -116,7 +117,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <a href="Less" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-left separatorpages" aria-hidden="true"></span></a> <a href="More" class="btn btn-lg disabled"><span class="glyphicon glyphicon-triangle-right separatorpages" aria-hidden="true"></span></a>
             </div> 
-            <br><br><br>
+            <br><br>
         </div>
         <?php
                 }
@@ -128,7 +129,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <a href="Less" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-left separatorpages" aria-hidden="true"></span></a> <a href="More" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-right separatorpages" aria-hidden="true"></span></a>
             </div> 
-            <br><br><br>
+            <br><br>
         </div>
         <?php
                 }
