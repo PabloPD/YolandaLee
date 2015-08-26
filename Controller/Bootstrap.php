@@ -58,7 +58,6 @@ class Bootstrap {
                 $controller->goIndex();
             } else
                 echo "View.php doesn't exists";
-            echo 'aki';
         }
     }
 

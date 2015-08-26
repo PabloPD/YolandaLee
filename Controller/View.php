@@ -47,7 +47,7 @@ class View {
     
     function Autor($nameAutor){
         include_once 'Controller/Client.php';
-        $file = "View/index.php";
+        $file = "View/newindex.php";
 
         $_SESSION['libros'] = getallautor($nameAutor);
         $temas = getalltemas();
@@ -59,7 +59,7 @@ class View {
             return;
         }
         else{
-            $_SESSION['not_found']='';
+            $_SESSION['not_found']='Se han encontrado '.$_SESSION['count_libros'].' libros';
         }
         
         if(file_exists($file)){
@@ -72,7 +72,7 @@ class View {
      */
     function Titulo($nameTitulo){
         include_once 'Controller/Client.php';
-        $file = "View/index.php";
+        $file = "View/newindex.php";
 
         $_SESSION['libros'] = getalltitulo($nameTitulo);
         $temas = getalltemas();
@@ -84,7 +84,7 @@ class View {
             return;
         }
         else{
-            $_SESSION['not_found']='';
+            $_SESSION['not_found']='Se han encontrado '.$_SESSION['count_libros'].' libros';
         }
         
         if(file_exists($file)){
@@ -94,7 +94,7 @@ class View {
     
     function Todo($option){
         include_once 'Controller/Client.php';
-        $file = "View/index.php";
+        $file = "View/newindex.php";
 
         $_SESSION['libros'] = getallsearch($option);
         $temas = getalltemas();
@@ -106,7 +106,7 @@ class View {
             return;
         }
         else{
-            $_SESSION['not_found']='';
+            $_SESSION['not_found']='Se han encontrado '.$_SESSION['count_libros'].' libros';
         }
         
         if(file_exists($file)){
@@ -127,7 +127,7 @@ class View {
             return;
         }
         else{
-            $_SESSION['not_found']='';
+            $_SESSION['not_found']='Se han encontrado '.$_SESSION['count_libros'].' libros';
         }
         
         if(file_exists($file)){
@@ -148,7 +148,7 @@ class View {
             return;
         }
         else{
-            $_SESSION['not_found']='';
+            $_SESSION['not_found']='Se han encontrado '.$_SESSION['count_libros'].' libros';
         }
         
         if(file_exists($file)){

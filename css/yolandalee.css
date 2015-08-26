@@ -48,7 +48,7 @@ background-color: rgba(206,255,255,0.5);
 
 .transparent
 {
-background-color: rgba(220,225,187,0.7);    
+background-color: rgba(220,225,187,0.9);    
 }
 
 #search
@@ -60,7 +60,7 @@ background-color: rgba(220,225,187,0.7);
 {
 height: 530px;
 padding: 5px;
-font-size: 18px;
+font-size: 16px;
 }
 
 .links
@@ -84,10 +84,30 @@ background-color: rgba(255,255,255,0.5);
 
 .fondoLibro
 {
+height: 528px;
+padding: 5px;
+font-size: 16px;
 background-image: url(../img/imgprueba.png);
 background-repeat: no-repeat;
 opacity: 0.2;
 background-position: center 20%;
-margin-top: -260px;
+margin-top: -140px;
 z-index: -1;
+
+}
+
+.librosFound
+{
+height: 80px;
+padding: 5px;
+}
+
+.borderright
+{
+border-right: 1px solid black;
+}
+
+.textoLibro
+{
+margin-top: -400px;
 }

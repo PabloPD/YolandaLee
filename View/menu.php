@@ -1,0 +1,6 @@
+<div class="hidden-xs col-sm-3 col-md-3 col-lg-3">
+    asdda
+    asad
+    
+</div>
+
