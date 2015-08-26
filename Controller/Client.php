@@ -5,9 +5,9 @@
  * Conexion con wsdl servidor
  */
 function getClient() {
-    //$wsdl="http://www.knowfirst.me/server/index.php?wsdl";  // SOAP Server
+    $wsdl="http://lamardelibros.cat/server/index.php?wsdl";  // SOAP Server
     //$wsdl="http://localhost:8080/YolandaLee/server/index.php?wsdl";  // SOAP Server
-    $wsdl="http://localhost/YolandaLee/server/index.php?wsdl";  // SOAP Server
+    //$wsdl="http://localhost/YolandaLee/server/index.php?wsdl";  // SOAP Server
     $client=new soapclient($wsdl) or die("Error");
     return $client;
 }
@@ -31,6 +31,7 @@ else {
 }
 
 function getallbook() {
+    echo 'albook';
     $client = getClient();
     $response = $client->__call('getbooks',array("data")); 
     return $response;

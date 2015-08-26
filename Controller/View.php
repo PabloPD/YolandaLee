@@ -26,8 +26,9 @@ class View {
         $_SESSION['libros'] = getallbook();
         $temas = getalltemas();
         $_SESSION['count_libros']=  count($_SESSION['libros']);
-        
+        echo 'goind';
         if(file_exists($file)){
+            echo 'goind';
             include_once $file;
         }
     }

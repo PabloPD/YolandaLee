@@ -10,7 +10,6 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-
         <?php
         session_start();
         $filename = 'Controller/Bootstrap.php';

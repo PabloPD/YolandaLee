@@ -30,7 +30,15 @@
                         </select>
                         <input type="submit" class="form-control btn-success" value="search" id="updateBtn" />
                     </form>
-                    
+                    <div class="visible-xs">
+                        <?php
+                        foreach ($temas as $t) {
+
+                        echo '<a href="Tema/'.$t->name.'" style="font-size:'.rand(10, 18).'px;color:rgb('.rand(100, 250).','.rand(50, 180).','.rand(1, 150).');"> '.$t->name.'  </a>';
+
+                    }
+                    ?>
+                    </div>
                     <div >
                         <h3>La Mar de Libros</h3> 
                     </div>

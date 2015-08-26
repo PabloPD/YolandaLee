@@ -15,7 +15,7 @@ class Bootstrap {
 
     //put your code here
     public function __construct() {
-        
+        echo 'hola bots';
         if (isset($_GET['url'])) {
  
             $url = $_GET['url'];

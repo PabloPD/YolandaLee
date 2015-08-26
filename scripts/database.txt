@@ -109,128 +109,155 @@ foreign key(b_te_fk) references tema(te_id)
 )engine = InnoDB;
 
 
-insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno ', 'imgprueba',1,1);
+insert into book values(null,'a','Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras referencias mas que las propias 
+experiencias vividas, Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras 
+referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva 
+y sin basarse en otras referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, 
+totalmente subjetiva y sin basarse en otras referencias mas que las propias experiencias vividas', 'imgprueba',1,1);
 
-insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno ', 'imgprueba',2,1);
+insert into book values(null,'a','Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras referencias mas que las propias 
+experiencias vividas, Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras 
+referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva 
+y sin basarse en otras referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, 
+totalmente subjetiva y sin basarse en otras referencias mas que las propias experiencias vividas', 'imgprueba',2,1);
 
-insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno ', 'imgprueba',3,2);
+insert into book values(null,'a','Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras referencias mas que las propias 
+experiencias vividas, Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras 
+referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva 
+y sin basarse en otras referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, 
+totalmente subjetiva y sin basarse en otras referencias mas que las propias experiencias vividas', 'imgprueba',3,2);
 
-insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno ', 'imgprueba',4,3);
+insert into book values(null,'a','Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras referencias mas que las propias 
+experiencias vividas, Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras 
+referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva 
+y sin basarse en otras referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, 
+totalmente subjetiva y sin basarse en otras referencias mas que las propias experiencias vividas', 'imgprueba',4,3);
 
-insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno ', 'imgprueba',5,4);
+insert into book values(null,'a','Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras referencias mas que las propias 
+experiencias vividas, Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras 
+referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva 
+y sin basarse en otras referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, 
+totalmente subjetiva y sin basarse en otras referencias maas que las propias experiencias vividas', 'imgprueba',5,4);
 
-insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno ', 'imgprueba',6,5);
+insert into book values(null,'a','Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras referencias mas que las propias 
+experiencias vividas, Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras 
+referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva 
+y sin basarse en otras referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, 
+totalmente subjetiva y sin basarse en otras referencias mas que las propias experiencias vividas', 'imgprueba',6,5);
 
-insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno ', 'imgprueba',7,6);
+insert into book values(null,'a','Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras referencias mas que las propias 
+experiencias vividas, Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras 
+referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva 
+y sin basarse en otras referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, 
+totalmente subjetiva y sin basarse en otras referencias mas que las propias experiencias vividas', 'imgprueba',7,6);
 
-insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno ', 'imgprueba',8,7);
+insert into book values(null,'a','Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras referencias mas que las propias 
+experiencias vividas, Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras 
+referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva 
+y sin basarse en otras referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, 
+totalmente subjetiva y sin basarse en otras referencias mas que las propias experiencias vividas', 'imgprueba',8,7);
 
-insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno ', 'imgprueba',9,6);
+insert into book values(null,'a','Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras referencias mas que las propias 
+experiencias vividas, Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras 
+referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva 
+y sin basarse en otras referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, 
+totalmente subjetiva y sin basarse en otras referencias mas que las propias experiencias vividas', 'imgprueba',9,6);
 
-insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno ', 'imgprueba',10,5);
+insert into book values(null,'a','Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras referencias mas que las propias 
+experiencias vividas, Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras 
+referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva 
+y sin basarse en otras referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, 
+totalmente subjetiva y sin basarse en otras referencias mas que las propias experiencias vividas', 'imgprueba',10,5);
 
-insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno ', 'imgprueba',11,4);
+insert into book values(null,'a','Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras referencias mas que las propias 
+experiencias vividas, Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras 
+referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva 
+y sin basarse en otras referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, 
+totalmente subjetiva y sin basarse en otras referencias mas que las propias experiencias vividas', 'imgprueba',11,4);
 
-insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno ', 'imgprueba',12,3);
+insert into book values(null,'a','Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras referencias mas que las propias 
+experiencias vividas, Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras 
+referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva 
+y sin basarse en otras referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, 
+totalmente subjetiva y sin basarse en otras referencias mas que las propias experiencias vividas', 'imgprueba',12,3);
 
-insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno ', 'imgprueba',13,1);
+insert into book values(null,'a','Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras referencias mas que las propias 
+experiencias vividas, Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras 
+referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva 
+y sin basarse en otras referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, 
+totalmente subjetiva y sin basarse en otras referencias mas que las propias experiencias vividas', 'imgprueba',13,1);
 
-insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno ', 'imgprueba',14,2);
-insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno ', 'imgprueba',15,5);
+insert into book values(null,'a','Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras referencias mas que las propias 
+experiencias vividas, Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras 
+referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva 
+y sin basarse en otras referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, 
+totalmente subjetiva y sin basarse en otras referencias mas que las propias experiencias vividas', 'imgprueba',14,2);
 
-insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno ', 'imgprueba',16,1);
+insert into book values(null,'a','Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras referencias mas que las propias 
+experiencias vividas, Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras 
+referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva 
+y sin basarse en otras referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, 
+totalmente subjetiva y sin basarse en otras referencias mas que las propias experiencias vividas', 'imgprueba',15,5);
 
-insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno ', 'imgprueba',17,1);
+insert into book values(null,'a','Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras referencias mas que las propias 
+experiencias vividas, Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras 
+referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva 
+y sin basarse en otras referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, 
+totalmente subjetiva y sin basarse en otras referencias mas que las propias experiencias vividas', 'imgprueba',16,1);
 
-insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno ', 'imgprueba',18,5);
+insert into book values(null,'a','Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras referencias mas que las propias 
+experiencias vividas, Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras 
+referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva 
+y sin basarse en otras referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, 
+totalmente subjetiva y sin basarse en otras referencias mas que las propias experiencias vividas', 'imgprueba',17,1);
 
-insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno ', 'imgprueba',19,4);
+insert into book values(null,'a','Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras referencias mas que las propias 
+experiencias vividas, Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras 
+referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva 
+y sin basarse en otras referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, 
+totalmente subjetiva y sin basarse en otras referencias mas que las propias experiencias vividas', 'imgprueba',18,5);
 
-insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno ', 'imgprueba',20,3);
+insert into book values(null,'a','Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras referencias mas que las propias 
+experiencias vividas, Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras 
+referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva 
+y sin basarse en otras referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, 
+totalmente subjetiva y sin basarse en otras referencias mas que las propias experiencias vividas', 'imgprueba',19,4);
 
-insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno ', 'imgprueba',21,1);
+insert into book values(null,'a','Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras referencias mas que las propias 
+experiencias vividas, Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras 
+referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva 
+y sin basarse en otras referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, 
+totalmente subjetiva y sin basarse en otras referencias mas que las propias experiencias vividas', 'imgprueba',20,3);
 
-insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno ', 'imgprueba',22,2);
-insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno ', 'imgprueba',23,5);
+insert into book values(null,'a','Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras referencias mas que las propias 
+experiencias vividas, Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras 
+referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva 
+y sin basarse en otras referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, 
+totalmente subjetiva y sin basarse en otras referencias mas que las propias experiencias vividas', 'imgprueba',21,1);
 
-insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno ', 'imgprueba',24,1);
+insert into book values(null,'a','Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras referencias mas que las propias 
+experiencias vividas, Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras 
+referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva 
+y sin basarse en otras referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, 
+totalmente subjetiva y sin basarse en otras referencias mas que las propias experiencias vividas', 'imgprueba',22,2);
 
-insert into book values(null,'a','Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno Es muy bueno muyyyyyyyy bueno 
-Es muy bueno muyyyyyyyy bueno ', 'imgprueba',25,1);
+insert into book values(null,'a','Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras referencias mas que las propias 
+experiencias vividas, Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras 
+referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva 
+y sin basarse en otras referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, 
+totalmente subjetiva y sin basarse en otras referencias mas que las propias experiencias vividas', 'imgprueba',23,5);
+
+insert into book values(null,'a','Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras referencias mas que las propias 
+experiencias vividas, Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras 
+referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva 
+y sin basarse en otras referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, 
+totalmente subjetiva y sin basarse en otras referencias mas que las propias experiencias vividas', 'imgprueba',24,1);
+
+insert into book values(null,'a','Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras referencias mas que las propias 
+experiencias vividas, Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva y sin basarse en otras 
+referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, totalmente subjetiva 
+y sin basarse en otras referencias mas que las propias experiencias vividas Esto es un ejemplo de opinion sobre un libro, 
+totalmente subjetiva y sin basarse en otras referencias mas que las propias experiencias vividas', 'imgprueba',25,1);
 
 select * from book;
 select b_valoracion, b_comentario, b_picture, ti_name, au_name from book left join titulo on b_ti_fk=ti_id left join autor on ti_au_fk_autor=au_id;
