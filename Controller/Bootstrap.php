@@ -15,7 +15,7 @@ class Bootstrap {
 
     //put your code here
     public function __construct() {
-        echo 'hola bots';
+
         if (isset($_GET['url'])) {
  
             $url = $_GET['url'];
@@ -30,12 +30,14 @@ class Bootstrap {
                 $controller = new View();
                 
                 if(isset($url[2])){
-                    echo '2';
+                    echo '<h1>No intentes timar hacker</h1>';
                 }
                 elseif (isset($url[1])) {
-                    $controller->{$url[0]}($url[1]);
+                    if($url[0]=="Server")                        include_once './Server/index.php';
+                    else $controller->{$url[0]}($url[1]);
                 }
                 elseif (isset($url[0])) {
+                    echo '0';
                     if($url[0] == 'Search'){
                         $controller->{$_POST['filter']}($_POST['search']);
                     }
@@ -45,7 +47,6 @@ class Bootstrap {
                     
                 }
                 else{
-                    
                     $controller->goIndex();
                 }
 

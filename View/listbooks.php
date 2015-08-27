@@ -28,8 +28,8 @@
                 echo 'Autor : '. $b->autor .'<br>';
                 echo 'Valoracion : '. $b->valoration .'<br>';
                 echo 'tema : '. $b->tema .'</div><br>';
-                echo '<div class="fondoLibro"></div>';
-                echo '<div class="textoLibro">'.$b->coment.'</div>';
+                echo '<div style="background-image: url(img/'.$b->picture.'.PNG);" class="fondoLibro" ></div>';
+                echo '<strong><div class="text-justify textoLibro">'.$b->coment.'</div></strong>';
                 echo '</div>';
             }
             else{

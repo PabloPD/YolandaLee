@@ -1,13 +1,6 @@
-var getallbooks = "getallbook";
-
 
 $(function (){
     
-    
-    $(".temamarcado").click(function (){
-       id = $(this).attr("id");
-       alert(id);
-    });
     
     $("div").each(function () {
         $(this).mouseenter(function () {
@@ -20,10 +13,18 @@ $(function (){
         $(this).mouseleave(function () {
             
             if($(this).attr('class') == "fondoLibro"){
-                $(this).css('opacity',0.2);
+                $(this).css('opacity',0.7);
             }
             });
         
+        $(this).click(function () {
+            
+            if($(this).attr('class') == "fondoLibro"){
+                
+                if($(this).css('opacity')== 0.7) $(this).css('opacity',1);
+                else $(this).css('opacity',0.7);
+            }
+            });
 
     });
     

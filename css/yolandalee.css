@@ -87,9 +87,8 @@ background-color: rgba(255,255,255,0.5);
 height: 528px;
 padding: 5px;
 font-size: 16px;
-background-image: url(../img/imgprueba.png);
 background-repeat: no-repeat;
-opacity: 0.2;
+opacity: 0.5;
 background-position: center 20%;
 margin-top: -140px;
 z-index: -1;
@@ -109,5 +108,9 @@ border-right: 1px solid black;
 
 .textoLibro
 {
+opacity: 1;
 margin-top: -400px;
+font-weight: bold;
+font-family: "Courier New", Courier, monospace;
+color: black;
 }
