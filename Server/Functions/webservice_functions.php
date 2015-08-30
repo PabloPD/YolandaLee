@@ -38,6 +38,32 @@ function getbooks($data) {
     return $array;
 }
 
+
+function gettemas($gettema) {
+    
+    //$log = new Log();
+    //$log->message("Accede a getbooks");
+    $dbo = (new ModelPDO())->getDBO();  // Database Object
+
+    $sth = $dbo->query("select te_name from tema order by te_name");
+    
+    // Set parameters
+    $result = $sth->fetchAll();
+
+    $array = array();
+    
+    foreach ($result as $value) {
+        
+        $book = array(
+            "name" => $value['te_name'],
+        );
+        
+        array_push($array, $book);
+    }
+    return $array;
+}
+
+
 function getautor($nameAutor) {
     
     //$log = new Log();
@@ -68,30 +94,6 @@ function getautor($nameAutor) {
 }
 
 
-function gettemas($gettema) {
-    
-    //$log = new Log();
-    //$log->message("Accede a getbooks");
-    $dbo = (new ModelPDO())->getDBO();  // Database Object
-
-    $sth = $dbo->query("select te_name from tema order by te_name");
-    
-    // Set parameters
-    $result = $sth->fetchAll();
-
-    $array = array();
-    
-    foreach ($result as $value) {
-        
-        $book = array(
-            "name" => $value['te_name'],
-        );
-        
-        array_push($array, $book);
-    }
-    return $array;
-}
-
 function gettitulos($gettittle) {
     
     //$log = new Log();
@@ -120,6 +122,7 @@ function gettitulos($gettittle) {
     }
     return $array;
 }
+
 
 function getall($getoption) {
     
@@ -161,6 +164,7 @@ function getall($getoption) {
     return $array;
 }
 
+
 function getbookstemas($getthemes) {
     //$log = new Log();
     //$log->message("Accede a getbooks");
@@ -188,3 +192,57 @@ function getbookstemas($getthemes) {
     }
     return $array;
 }
+
+
+
+function autoresmenu($autorsmenu) {
+
+    //$log = new Log();
+    //$log->message("Accede a getbooks");
+    
+    $dbo = (new ModelPDO())->getDBO();  // Database Object
+
+    $sth = $dbo->query("select au_name from autor order by au_name");
+    
+    // Set parameters
+    $result = $sth->fetchAll();
+
+    $array = array();
+    
+    foreach ($result as $value) {
+        
+        $book = array(
+            "name" => $value['au_name'],
+        );
+        
+        array_push($array, $book);
+    }
+    //$array = array('hola');
+    return $array;
+}
+
+
+function Librosmenu($librsmenu) {
+    
+    //$log = new Log();
+    //$log->message("Accede a getbooks");
+    $dbo = (new ModelPDO())->getDBO();  // Database Object
+
+    $sth = $dbo->query('SELECT ti_name from titulo, book where b_valoracion = "a" AND b_ti_fk = ti_id');
+    
+    // Set parameters
+    $result = $sth->fetchAll();
+
+    $array = array();
+    
+    foreach ($result as $value) {
+        
+        $book = array(
+            "name" => $value['ti_name'],
+        );
+        
+        array_push($array, $book);
+    }
+    return $array;
+}
+

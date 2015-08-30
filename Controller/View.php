@@ -24,7 +24,7 @@ class View {
         $file = "View/newindex.php";
 
         $_SESSION['libros'] = getallbook();
-        $temas = getalltemas();
+        if(!isset($_SESSION['temas']) OR !isset($_SESSION['autores']) OR !isset($_SESSION['titulos'])) $this->loadMenu ();
         $_SESSION['count_libros']=  count($_SESSION['libros']);
         if(file_exists($file)){
             include_once $file;
@@ -35,8 +35,8 @@ class View {
         include_once 'Controller/Client.php';
         $file = "View/temas.php";
 
-        $_SESSION['libros'] = getallbook();
-        $temas = getalltemas();
+        if(isset($_SESSION['libros'])) $_SESSION['libros'] = getallbook();
+        if(!isset($_SESSION['temas']) OR !isset($_SESSION['autores']) OR !isset($_SESSION['titulos'])) $this->loadMenu ();
         $_SESSION['count_libros']=  count($_SESSION['libros']);
         
         if(file_exists($file)){
@@ -49,7 +49,7 @@ class View {
         $file = "View/newindex.php";
 
         $_SESSION['libros'] = getallautor($nameAutor);
-        $temas = getalltemas();
+        if(!isset($_SESSION['temas']) OR !isset($_SESSION['autores']) OR !isset($_SESSION['titulos'])) $this->loadMenu ();
         $_SESSION['count_libros'] = count($_SESSION['libros']);
         
         if($_SESSION['count_libros']==0){
@@ -74,7 +74,7 @@ class View {
         $file = "View/newindex.php";
 
         $_SESSION['libros'] = getalltitulo($nameTitulo);
-        $temas = getalltemas();
+        if(!isset($_SESSION['temas']) OR !isset($_SESSION['autores']) OR !isset($_SESSION['titulos'])) $this->loadMenu ();
         $_SESSION['count_libros'] = count($_SESSION['libros']);
         
         if($_SESSION['count_libros']==0){
@@ -96,7 +96,7 @@ class View {
         $file = "View/newindex.php";
 
         $_SESSION['libros'] = getallsearch($option);
-        $temas = getalltemas();
+        if(!isset($_SESSION['temas']) OR !isset($_SESSION['autores']) OR !isset($_SESSION['titulos'])) $this->loadMenu ();
         $_SESSION['count_libros'] = count($_SESSION['libros']);
         
         if($_SESSION['count_libros']==0){
@@ -118,7 +118,7 @@ class View {
         include_once 'Controller/Client.php';
         $file = "View/temas.php";
         $_SESSION['libros'] = getbooksTheme($theme);
-        $temas = getalltemas();
+        if(!isset($_SESSION['temas']) OR !isset($_SESSION['autores']) OR !isset($_SESSION['titulos'])) $this->loadMenu ();
         $_SESSION['count_libros'] = count($_SESSION['libros']);
         if($_SESSION['count_libros']==0){
             $_SESSION['not_found']='No hay resultados con esa busqueda';
@@ -139,7 +139,7 @@ class View {
         include_once 'Controller/Client.php';
         $file = "View/temas.php";
         $_SESSION['libros'] = getbooksTheme($theme);
-        $temas = getalltemas();
+        if(!isset($_SESSION['temas']) OR !isset($_SESSION['autores']) OR !isset($_SESSION['titulos'])) $this->loadMenu ();
         $_SESSION['count_libros'] = count($_SESSION['libros']);
         if($_SESSION['count_libros']==0){
             $_SESSION['not_found']='No hay resultados con esa busqueda';
@@ -158,7 +158,7 @@ class View {
     function More(){
         $file = "View/newindex.php";
         include_once 'Controller/Client.php';
-        $temas = getalltemas();
+        if(!isset($_SESSION['temas']) OR !isset($_SESSION['autores']) OR !isset($_SESSION['titulos'])) $this->loadMenu ();
         if($_SESSION['num_pag'] + $this->numLibrosPagina < $_SESSION['count_libros'] + $this->numLibrosPagina) $_SESSION['num_pag'] = $_SESSION['num_pag'] + $this->numLibrosPagina;
         
         if(file_exists($file)){
@@ -169,13 +169,19 @@ class View {
     function Less(){
         $file = "View/newindex.php";
         include_once 'Controller/Client.php';
-        $temas = getalltemas();
+        if(!isset($_SESSION['temas']) OR !isset($_SESSION['autores']) OR !isset($_SESSION['titulos'])) $this->loadMenu ();
         if($_SESSION['num_pag'] - $this->numLibrosPagina <= 0) $_SESSION['num_pag'] = $this->numLibrosPagina;
         else $_SESSION['num_pag'] = $_SESSION['num_pag'] - $this->numLibrosPagina;
         
         if(file_exists($file)){
             include_once $file;
         }
+    }
+    
+    function loadMenu(){
+        $_SESSION['temas'] = getalltemas();
+        $_SESSION['autores'] = getallauthors();
+        $_SESSION['titulos'] = getallallibres();
     }
     
 }

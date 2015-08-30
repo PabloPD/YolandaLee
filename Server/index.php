@@ -70,6 +70,29 @@ $server->register('getbookstemas', // method
         'Method return tittles'// documentation
 );
 
+
+$server->register('autoresmenu', // method
+        array('autorsmenu' => 'xsd:string'), // input parameters
+        array('result' => 'xsd:Array'), // output parameters
+        'urn:yoliLeews', // namespace
+        'urn:yoliLeews#autoresmenu', // soapaction
+        'rpc', // style
+        'encoded', // use
+        'Method return autors'// documentation
+);
+
+$server->register('Librosmenu', // method
+        array('librsmenu' => 'xsd:string'), // input parameters
+        array('result' => 'xsd:Array'), // output parameters
+        'urn:yoliLeews', // namespace
+        'urn:yoliLeews#autoresmenu', // soapaction
+        'rpc', // style
+        'encoded', // use
+        'Method return autors'// documentation
+);
+
+
+
 // Use the request to (try to) invoke the service
 $HTTP_RAW_POST_DATA = isset($HTTP_RAW_POST_DATA) ? $HTTP_RAW_POST_DATA : '';
 $server->service($HTTP_RAW_POST_DATA);

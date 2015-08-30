@@ -32,11 +32,13 @@
                     </form>
                     <div class="visible-xs">
                         <?php
-                        foreach ($temas as $t) {
+                        if(isset($_SESSION['temas'])){
+                          foreach ($_SESSION['temas'] as $t) {
 
-                        echo '<a href="Tema/'.$t->name.'" style="font-size:'.rand(10, 18).'px;color:rgb('.rand(100, 250).','.rand(50, 180).','.rand(1, 150).');"> '.$t->name.'  </a>';
+                            echo '<a href="Tema/'.$t->name.'" style="font-size:'.rand(10, 18).'px;color:rgb('.rand(100, 250).','.rand(50, 180).','.rand(1, 150).');"> '.$t->name.'  </a>';
 
-                    }
+                            }  
+                        }  
                     ?>
                     </div>
                     <div >
@@ -65,33 +67,42 @@
                 <div>Temas</div><br>
                 <?php
                 for($x=0; $x<2;$x++){
-                    foreach ($temas as $t) {
+                    if(isset($_SESSION['temas'])){
+                        shuffle($_SESSION['temas']);
+                        foreach ($_SESSION['temas'] as $t) {
 
                         echo '<a href="Tema/'.$t->name.'" style="font-size:'.rand(12, 24).'px;color:rgb('.rand(100, 250).','.rand(50, 180).','.rand(1, 150).');"> '.$t->name.'  </a>';
 
-                    }
+                        }  
+                    }  
                 }
                     ?>
                 
                 <br><br><div>Autores</div><br>
                 <?php
-                for($x=0; $x<2;$x++){
-                    foreach ($temas as $t) {
+                for($x=0; $x<1;$x++){
+                    if(isset($_SESSION['autores'])){
+                        shuffle($_SESSION['autores']);
+                        foreach ($_SESSION['autores'] as $a) {
 
-                        echo '<a href="Tema/'.$t->name.'" style="font-size:'.rand(12, 24).'px;color:rgb('.rand(100, 250).','.rand(50, 180).','.rand(1, 150).');"> '.$t->name.'  </a>';
+                        echo '<a href="Autor/'.$a->name.'" style="font-size:'.rand(12, 24).'px;color:rgb('.rand(100, 250).','.rand(50, 180).','.rand(1, 150).');"> '.$a->name.'  </a>';
 
+                        }  
                     }
                 }
                     ?>
                 
                 <br><br><div><b>Libros</b></div><br>
                 <?php
-                for($x=0; $x<2;$x++){
-                    foreach ($temas as $t) {
+                for($x=0; $x<1;$x++){
+                    if(isset($_SESSION['titulos'])){
+                        shuffle($_SESSION['titulos']);
+                        foreach ($_SESSION['titulos'] as $t) {
 
-                        echo '<a href="Tema/'.$t->name.'" style="font-size:'.rand(12, 24).'px;color:rgb('.rand(100, 250).','.rand(50, 180).','.rand(1, 150).');"> '.$t->name.'  </a>';
+                        echo '<a href="Titulo/'.$t->name.'" style="font-size:'.rand(12, 24).'px;color:rgb('.rand(100, 250).','.rand(50, 180).','.rand(1, 150).');"> '.$t->name.'  </a>';
 
-                    }
+                        }
+                    }   
                 }
                     ?>
                 

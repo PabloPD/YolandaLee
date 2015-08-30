@@ -6,10 +6,11 @@
  */
 function getClient() {
 
-    $wsdl="http://www.lamardelibros.cat/Server/index.php?wsdl";  // SOAP Server
+    //$wsdl="http://www.lamardelibros.cat/Server/index.php?wsdl";  // SOAP Server
     //$wsdl="http://localhost:8080/YolandaLee/server/index.php?wsdl";  // SOAP Server
-    //$wsdl="http://localhost/YolandaLee/server/index.php?wsdl";  // SOAP Server
+    $wsdl="http://localhost/YolandaLee/server/index.php?wsdl";  // SOAP Server
     $client=new soapclient($wsdl) or die("Error");
+    //if(!isset($_SESSION['client'])) $_SESSION['client'] = new soapclient($wsdl) or die("Error");;
 
     return $client;
 }
@@ -65,6 +66,18 @@ function getallsearch($option) {
 function getbooksTheme($themes) {
     $client = getClient();
     $response = $client->__call('getbooksTemas',array($themes)); 
+    return $response;
+}
+
+function getallauthors() {
+    $client = getClient();
+    $response = $client->__call('autoresmenu',array("data")); 
+    return $response;
+}
+
+function getallallibres() {
+    $client = getClient();
+    $response = $client->__call('Librosmenu',array("data")); 
     return $response;
 }
 
