@@ -3,6 +3,7 @@
     <?php 
     include_once 'View/headurl.php'; 
     ?>
+<link rel="stylesheet" href="css/yolandalee.css"/>
 </head>
 <body>
     <header>  
@@ -18,7 +19,7 @@
                 </div>
 
                 <div class="collapse navbar-collapse  margintopnav navbarcolors" id="navbar-1">
-                    <form action="http://localhost/YolandaLee/Search" method="POST" class="navbar-form navbar-right" role="search">
+                    <form action="./Search" method="POST" class="navbar-form navbar-right" role="search">
                         <div class="form-group">
                             <input type="text" name="search" class="form-control" placeholder="search"/>
                         </div>
@@ -29,19 +30,19 @@
                         </select>
                         <input type="submit" class="form-control btn-success" value="search" id="updateBtn" />
                     </form>
-                    <div>
-                        <ul class="list-inline">
+                    <div class="visible-xs">
                         <?php
-                            foreach ($temas as $t) {
-                                
-                                echo '<li><a href="./'.$t->name.'" style="font-size:'.rand(14, 28).'px;color:rgb('.rand(100, 250).','.rand(50, 180).','.rand(1, 150).');"> '.$t->name.' </li> </a>';
-                                
-                            }
-                            ?>
-                        </ul>
+                        if(isset($_SESSION['temas'])){
+                          foreach ($_SESSION['temas'] as $t) {
+
+                            echo '<a href="www.lamardelibros.cat/Tema/'.$t->name.'" style="font-size:'.rand(10, 18).'px;color:rgb('.rand(100, 250).','.rand(50, 180).','.rand(1, 150).');"> '.$t->name.'  </a>';
+
+                            }  
+                        }  
+                    ?>
                     </div>
-                    <div>
-                        <br>Clasificación categoría <a href="http://localhost/YolandaLee/Clasificacion/az"> A-Z </a> / <a href="http://localhost/YolandaLee/Clasificacion/za"> Z-A </a>
+                    <div >
+                        <h3>La Mar de Libros</h3> 
                     </div>
                 </div>
             </div>
@@ -52,52 +53,65 @@
     <br>
     <div class="container">
         <div class="row">
-            <br>    
+            <br><br>   
+             
+            <div class="col-sm-2 col-md-2 hidden-xs borderright"> 
+                <a href=".">Clasificacion A-E</a><br><br>
+                <a href=".">Clasificacion E-A</a><br><br>
+                <a href="./Clasificacion/A">A</a> , 
+                <a href="./Clasificacion/B">B</a> , 
+                <a href="./Clasificacion/C">C</a> , 
+                <a href="./Clasificacion/D">D</a> , 
+                <a href="./Clasificacion/E">E</a><br><br><br><br>
+     
+                <div>Temas</div><br>
                 <?php
-                
-                if(isset($_SESSION['libros'])){
-                     
-                    if(isset($_SESSION['not_found']) AND !$_SESSION['not_found']==''){
-                        echo '<div class="col-xs-12 col-sm-12 col-md-12 librosFound">';
-                        echo '<h4>'.$_SESSION['not_found'].'</h4>';
-                        echo '<br></div>';
-                    }
+                for($x=0; $x<2;$x++){
+                    if(isset($_SESSION['temas'])){
+                        shuffle($_SESSION['temas']);
+                        foreach ($_SESSION['temas'] as $t) {
 
-                    if(!isset($_SESSION['num_pag'])){
-                        $_SESSION['num_pag']=6;
-                    }
+                        echo '<a href="../Tema/'.$t->name.'" style="font-size:'.rand(12, 24).'px;color:rgb('.rand(100, 250).','.rand(50, 180).','.rand(1, 150).');"> '.$t->name.'  </a>';
 
-                    $_SESSION['contar_libs_pag'] = 0;
-                    
-                    foreach ($_SESSION['libros'] as $b) {
-
-                        if($_SESSION['contar_libs_pag'] >= $_SESSION['num_pag'] - 6 AND $_SESSION['contar_libs_pag'] < $_SESSION['num_pag']){
-                            echo '<div class="col-xs-12 col-sm-5 col-md-5 bordearLibro col-md-push-1 col-sm-push-1" >';
-                            echo '<br>';
-                            echo '<div class="links">Titulo : '. $b->tittle .'<br>';
-                            echo 'Autor : '. $b->autor .'<br>';
-                            echo 'Valoracion : '. $b->valoration .'<br>';
-                            echo 'tema : '. $b->tema .'</div><br><br>';
-                            echo $b->coment;
-                            echo '<div class="fondoLibro bordearLibro"></div>';
-                            echo '</div>';
-                        }
-                        else{
-                            if($_SESSION['num_pag'] - 6 > 0) $_SESSION['disableless'] = false;
-                            else $_SESSION['disableless'] = true;
-                            
-                            if($_SESSION['num_pag']+6 < $_SESSION['count_libros'] +6) $_SESSION['disablemore'] = false;
-                            else $_SESSION['disablemore'] = true;
-                        }
-                          $_SESSION['contar_libs_pag']++;
-
-                    }
-                    $_SESSION['not_found']='';
+                        }  
+                    }  
                 }
-                $_SESSION['not_found']='';
-                ?>
+                    ?>
+                
+                <br><br><div>Autores</div><br>
+                <?php
+                for($x=0; $x<1;$x++){
+                    if(isset($_SESSION['autores'])){
+                        shuffle($_SESSION['autores']);
+                        foreach ($_SESSION['autores'] as $a) {
+
+                        echo '<a href="../Autors/'.$a->name.'" style="font-size:'.rand(12, 24).'px;color:rgb('.rand(100, 250).','.rand(50, 180).','.rand(1, 150).');"> '.$a->name.'  </a>';
+
+                        }  
+                    }
+                }
+                    ?>
+                
+                <br><br><div><b>Libros</b></div><br>
+                <?php
+                for($x=0; $x<1;$x++){
+                    if(isset($_SESSION['titulos'])){
+                        shuffle($_SESSION['titulos']);
+                        foreach ($_SESSION['titulos'] as $t) {
+
+                        echo '<a href="../Titulos/'.$t->name.'" style="font-size:'.rand(12, 24).'px;color:rgb('.rand(100, 250).','.rand(50, 180).','.rand(1, 150).');"> '.$t->name.'  </a>';
+
+                        }
+                    }   
+                }
+                    ?>
+                
+            </div>
+            <div>
+                <?php include_once "View/listbooks.php"; ?>
+            </div>
             
-                </div>
+        </div>
         
         <?php
                 if($_SESSION['disableless']){
@@ -105,7 +119,7 @@
             
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <a href="http://localhost/YolandaLee/Less" class="btn btn-lg disabled"><span class="glyphicon glyphicon-triangle-left separatorpages" aria-hidden="true"></span></a> <a href="http://localhost/YolandaLee/More" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-right separatorpages" aria-hidden="true"></span></a>
+                <a href="./Less" class="btn btn-lg disabled"><span class="glyphicon glyphicon-triangle-left separatorpages" aria-hidden="true"></span></a> <a href="./More" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-right separatorpages" aria-hidden="true"></span></a>
             </div> 
             
         </div>
@@ -117,7 +131,7 @@
             
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <a href="http://localhost/YolandaLee/Less" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-left separatorpages" aria-hidden="true"></span></a> <a href="http://localhost/YolandaLee/More" class="btn btn-lg disabled"><span class="glyphicon glyphicon-triangle-right separatorpages" aria-hidden="true"></span></a>
+                <a href="./Less" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-left separatorpages" aria-hidden="true"></span></a> <a href="./More" class="btn btn-lg disabled"><span class="glyphicon glyphicon-triangle-right separatorpages" aria-hidden="true"></span></a>
             </div> 
             
         </div>
@@ -129,7 +143,7 @@
         
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <a href="http://localhost/YolandaLee/Less" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-left separatorpages" aria-hidden="true"></span></a> <a href="http://localhost/YolandaLee/More" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-right separatorpages" aria-hidden="true"></span></a>
+                <a href="./Less" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-left separatorpages" aria-hidden="true"></span></a> <a href="./More" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-right separatorpages" aria-hidden="true"></span></a>
             </div> 
             
         </div>
@@ -140,8 +154,6 @@
     </div>
     <br>
     
-    
-
     <script type="text/javascript" src="bs/js/bootstrap.min.js"></script> 
 </body>
 </html>

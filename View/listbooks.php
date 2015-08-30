@@ -1,6 +1,8 @@
 <html>
     <head>
-        
+        <?php 
+        if($url[0]="Tema") include_once 'View/headurl.php'; 
+        ?>
     </head>
     <div class="container"><?php
    

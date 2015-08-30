@@ -6,9 +6,9 @@
  */
 function getClient() {
 
-    //$wsdl="http://www.lamardelibros.cat/Server/index.php?wsdl";  // SOAP Server
+    $wsdl="http://www.lamardelibros.cat/Server/index.php?wsdl";  // SOAP Server
     //$wsdl="http://localhost:8080/YolandaLee/server/index.php?wsdl";  // SOAP Server
-    $wsdl="http://localhost/YolandaLee/server/index.php?wsdl";  // SOAP Server
+    //$wsdl="http://localhost/YolandaLee/server/index.php?wsdl";  // SOAP Server
     $client=new soapclient($wsdl) or die("Error");
     //if(!isset($_SESSION['client'])) $_SESSION['client'] = new soapclient($wsdl) or die("Error");;
 

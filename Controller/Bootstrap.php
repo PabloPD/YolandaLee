@@ -33,7 +33,7 @@ class Bootstrap {
                     echo '<h1>No intentes timar hacker</h1>';
                 }
                 elseif (isset($url[1])) {
-                    if($url[0]=="Server")                        include_once './Server/index.php';
+                    if($url[0]=="Server") include_once './Server/index.php';
                     else $controller->{$url[0]}($url[1]);
                 }
                 elseif (isset($url[0])) {

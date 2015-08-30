@@ -35,7 +35,7 @@
                         if(isset($_SESSION['temas'])){
                           foreach ($_SESSION['temas'] as $t) {
 
-                            echo '<a href="Tema/'.$t->name.'" style="font-size:'.rand(10, 18).'px;color:rgb('.rand(100, 250).','.rand(50, 180).','.rand(1, 150).');"> '.$t->name.'  </a>';
+                            echo '<a href="www.lamardelibros.cat/Tema/'.$t->name.'" style="font-size:'.rand(10, 18).'px;color:rgb('.rand(100, 250).','.rand(50, 180).','.rand(1, 150).');"> '.$t->name.'  </a>';
 
                             }  
                         }  
@@ -71,7 +71,7 @@
                         shuffle($_SESSION['temas']);
                         foreach ($_SESSION['temas'] as $t) {
 
-                        echo '<a href="Tema/'.$t->name.'" style="font-size:'.rand(12, 24).'px;color:rgb('.rand(100, 250).','.rand(50, 180).','.rand(1, 150).');"> '.$t->name.'  </a>';
+                        echo '<a href="../Tema/'.$t->name.'" style="font-size:'.rand(12, 24).'px;color:rgb('.rand(100, 250).','.rand(50, 180).','.rand(1, 150).');"> '.$t->name.'  </a>';
 
                         }  
                     }  
@@ -85,7 +85,7 @@
                         shuffle($_SESSION['autores']);
                         foreach ($_SESSION['autores'] as $a) {
 
-                        echo '<a href="Autor/'.$a->name.'" style="font-size:'.rand(12, 24).'px;color:rgb('.rand(100, 250).','.rand(50, 180).','.rand(1, 150).');"> '.$a->name.'  </a>';
+                        echo '<a href="../Autor/'.$a->name.'" style="font-size:'.rand(12, 24).'px;color:rgb('.rand(100, 250).','.rand(50, 180).','.rand(1, 150).');"> '.$a->name.'  </a>';
 
                         }  
                     }
@@ -99,7 +99,7 @@
                         shuffle($_SESSION['titulos']);
                         foreach ($_SESSION['titulos'] as $t) {
 
-                        echo '<a href="Titulo/'.$t->name.'" style="font-size:'.rand(12, 24).'px;color:rgb('.rand(100, 250).','.rand(50, 180).','.rand(1, 150).');"> '.$t->name.'  </a>';
+                        echo '<a href="../Titulo/'.$t->name.'" style="font-size:'.rand(12, 24).'px;color:rgb('.rand(100, 250).','.rand(50, 180).','.rand(1, 150).');"> '.$t->name.'  </a>';
 
                         }
                     }   

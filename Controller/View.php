@@ -134,6 +134,53 @@ class View {
         }
     }
     
+    function Autors($nameAutor){
+        include_once 'Controller/Client.php';
+        $file = "View/temas.php";
+
+        $_SESSION['libros'] = getallautor($nameAutor);
+        if(!isset($_SESSION['temas']) OR !isset($_SESSION['autores']) OR !isset($_SESSION['titulos'])) $this->loadMenu ();
+        $_SESSION['count_libros'] = count($_SESSION['libros']);
+        
+        if($_SESSION['count_libros']==0){
+            $_SESSION['not_found']='No hay resultados con esa busqueda';
+            $this->goIndex ();
+            return;
+        }
+        else{
+            $_SESSION['not_found']='Se han encontrado '.$_SESSION['count_libros'].' libros';
+        }
+        
+        if(file_exists($file)){
+            include_once $file;
+        }
+    }
+    
+    /*
+     * Creado en 2puesto
+     */
+    function Titulos($nameTitulo){
+        include_once 'Controller/Client.php';
+        $file = "View/temas.php";
+
+        $_SESSION['libros'] = getalltitulo($nameTitulo);
+        if(!isset($_SESSION['temas']) OR !isset($_SESSION['autores']) OR !isset($_SESSION['titulos'])) $this->loadMenu ();
+        $_SESSION['count_libros'] = count($_SESSION['libros']);
+        
+        if($_SESSION['count_libros']==0){
+            $_SESSION['not_found']='No hay resultados con esa busqueda';
+            $this->goIndex ();
+            return;
+        }
+        else{
+            $_SESSION['not_found']='Se han encontrado '.$_SESSION['count_libros'].' libros';
+        }
+        
+        if(file_exists($file)){
+            include_once $file;
+        }
+    }
+    
     
     function Clasificacion($option){
         include_once 'Controller/Client.php';
