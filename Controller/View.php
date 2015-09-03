@@ -136,7 +136,7 @@ class View {
     
     function Autors($nameAutor){
         include_once 'Controller/Client.php';
-        $file = "View/temas.php";
+        $file = "View/autor.php";
 
         $_SESSION['libros'] = getallautor($nameAutor);
         if(!isset($_SESSION['temas']) OR !isset($_SESSION['autores']) OR !isset($_SESSION['titulos'])) $this->loadMenu ();
@@ -161,7 +161,7 @@ class View {
      */
     function Titulos($nameTitulo){
         include_once 'Controller/Client.php';
-        $file = "View/temas.php";
+        $file = "View/libro.php";
 
         $_SESSION['libros'] = getalltitulo($nameTitulo);
         if(!isset($_SESSION['temas']) OR !isset($_SESSION['autores']) OR !isset($_SESSION['titulos'])) $this->loadMenu ();
