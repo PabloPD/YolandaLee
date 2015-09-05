@@ -63,8 +63,7 @@
                 <a href="./Clasificacion/B">B</a> , 
                 <a href="./Clasificacion/C">C</a> , 
                 <a href="./Clasificacion/D">D</a> , 
-                <a href="./Clasificacion/E">E</a> ,
-                <a href="./Clasificacion/E">estas en new index</a><br><br><br><br>
+                <a href="./Clasificacion/E">E</a> <br><br><br><br> ,
      
                 <div>Temas</div><br>
                 <?php
@@ -111,8 +110,7 @@
             </div>
             <div>
                 <?php
-                    include_once 'View/listbooks.php';
-                    
+                    include_once 'View/listbooks.php';    
                 ?>
             </div>
             
