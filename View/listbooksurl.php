@@ -4,12 +4,12 @@
 
         if(isset($_SESSION['not_found']) AND !$_SESSION['not_found']==''){
             echo '<div class="col-xs-12 col-sm-9 col-md-9 librosFound">';
-            echo '<h3>'.$_SESSION['not_found'].'</h3>';
+            echo '<h3>'.$_SESSION['not_found'].' libros en listbokkURL</h3>';
             echo '<br></div>';
         }
         else{
             echo '<div class="col-xs-12 col-sm-9 col-md-9 librosFound">';
-            echo '<h3>Hay '.count($_SESSION['libros']).' libros</h3>';
+            echo '<h3>Hay '.count($_SESSION['libros']).' libros en listbokkURL</h3>';
             echo '<br></div>';
         }
 

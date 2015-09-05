@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>Yolandalee</title>
+    <title>LaMarDeLibros</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-widht, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimum-scale=1.0">
     <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
@@ -26,6 +26,11 @@
     <script type="text/javascript" src="js/yolandalee.js"></script>
     <script type="text/javascript" src="js/jquery-ui.js"></script>
     <link rel="stylesheet" href="css/jquery-ui.css"/>
-    <link rel="stylesheet" href="css/jquery-ui.theme.css">
+    <link rel="stylesheet" href="../bs/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/yolandalee.css"/>
+    <script type="text/javascript" src="../js/yolandalee.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../css/jquery-ui.css"/>
+    <link rel="stylesheet" href="../css/jquery-ui.theme.css">
 
 <!--tipo de letra : Bradley Hand ITC   , para el fondo de imagen -->

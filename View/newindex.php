@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
-    <?php 
-    include_once 'View/head.php'; 
+    <?php
+    $fileindex = './View/head.php';
+    include_once $fileindex;
     ?>
-<link rel="stylesheet" href="css/yolandalee.css"/>
+
 </head>
 <body>
     <header>  
@@ -30,7 +31,7 @@
                         </select>
                         <input type="submit" class="form-control btn-success" value="search" id="updateBtn" />
                     </form>
-                    <div class="visible-xs">
+                    <div class="visible-xs ">
                         <?php
                         if(isset($_SESSION['temas'])){
                           foreach ($_SESSION['temas'] as $t) {
@@ -62,9 +63,10 @@
                 <a href="./Clasificacion/B">B</a> , 
                 <a href="./Clasificacion/C">C</a> , 
                 <a href="./Clasificacion/D">D</a> , 
-                <a href="./Clasificacion/E">E</a><br><br><br><br>
+                <a href="./Clasificacion/E">E</a> ,
+                <a href="./Clasificacion/E">estas en new index</a><br><br><br><br>
      
-                <div>Temas</div><br>
+                <div class="flas">Temas</div><br>
                 <?php
                 for($x=0; $x<2;$x++){
                     if(isset($_SESSION['temas'])){
@@ -108,7 +110,10 @@
                 
             </div>
             <div>
-                <?php include_once "View/listbooks.php"; ?>
+                <?php
+                    include_once 'View/listbooks.php';
+                    
+                ?>
             </div>
             
         </div>
@@ -119,7 +124,7 @@
             
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <a href="./Less" class="btn btn-lg disabled"><span class="glyphicon glyphicon-triangle-left separatorpages" aria-hidden="true"></span></a> <a href="./More" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-right separatorpages" aria-hidden="true"></span></a>
+                <a href="../Less" class="btn btn-lg disabled"><span class="glyphicon glyphicon-triangle-left separatorpages" aria-hidden="true"></span></a> <a href="../More" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-right separatorpages" aria-hidden="true"></span></a>
             </div> 
             
         </div>
@@ -131,7 +136,7 @@
             
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <a href="./Less" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-left separatorpages" aria-hidden="true"></span></a> <a href="./More" class="btn btn-lg disabled"><span class="glyphicon glyphicon-triangle-right separatorpages" aria-hidden="true"></span></a>
+                <a href="../Less" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-left separatorpages" aria-hidden="true"></span></a> <a href="../More" class="btn btn-lg disabled"><span class="glyphicon glyphicon-triangle-right separatorpages" aria-hidden="true"></span></a>
             </div> 
             
         </div>
@@ -143,7 +148,7 @@
         
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <a href="./Less" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-left separatorpages" aria-hidden="true"></span></a> <a href="./More" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-right separatorpages" aria-hidden="true"></span></a>
+                <a href="../Less" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-left separatorpages" aria-hidden="true"></span></a> <a href="../More" class="btn btn-lg"><span class="glyphicon glyphicon-triangle-right separatorpages" aria-hidden="true"></span></a>
             </div> 
             
         </div>

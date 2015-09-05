@@ -15,7 +15,9 @@ class Bootstrap {
 
     //put your code here
     public function __construct() {
-
+        
+        $_SESSION['busqueda']=false;
+        
         if (isset($_GET['url'])) {
  
             $url = $_GET['url'];
@@ -23,7 +25,7 @@ class Bootstrap {
             $url = explode('/', $url);
 
             $file = 'Controller/View.php';
-
+            
             if (file_exists($file)) {
                 
                 require_once $file;
@@ -34,10 +36,12 @@ class Bootstrap {
                 }
                 elseif (isset($url[1])) {
                     if($url[0]=="Server") include_once './Server/index.php';
-                    else $controller->{$url[0]}($url[1]);
+                    else{
+                        $_SESSION['busqueda']=TRUE;
+                        $controller->{$url[0]}($url[1]);
+                    }
                 }
                 elseif (isset($url[0])) {
-                    echo '0';
                     if($url[0] == 'Search'){
                         $controller->{$_POST['filter']}($_POST['search']);
                     }
@@ -47,6 +51,7 @@ class Bootstrap {
                     
                 }
                 else{
+                    $_SESSION['busqueda']=false;
                     $controller->goIndex();
                 }
 
@@ -54,6 +59,7 @@ class Bootstrap {
         } else {
             $file = 'Controller/View.php';
             if (file_exists($file)) {
+                $_SESSION['busqueda'] = FALSE;
                 require_once $file;
                 $controller = new View();
                 $controller->goIndex();

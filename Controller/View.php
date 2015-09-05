@@ -30,19 +30,7 @@ class View {
             include_once $file;
         }
     }
-    
-    function goIndexUrl(){
-        include_once 'Controller/Client.php';
-        $file = "View/temas.php";
 
-        if(isset($_SESSION['libros'])) $_SESSION['libros'] = getallbook();
-        if(!isset($_SESSION['temas']) OR !isset($_SESSION['autores']) OR !isset($_SESSION['titulos'])) $this->loadMenu ();
-        $_SESSION['count_libros']=  count($_SESSION['libros']);
-        
-        if(file_exists($file)){
-            include_once $file;
-        }
-    }
     
     function Autor($nameAutor){
         include_once 'Controller/Client.php';
@@ -115,14 +103,15 @@ class View {
     
     
     function Tema($theme){
+        
         include_once 'Controller/Client.php';
-        $file = "View/temas.php";
+        $file = "View/newindex.php";
         $_SESSION['libros'] = getbooksTheme($theme);
         if(!isset($_SESSION['temas']) OR !isset($_SESSION['autores']) OR !isset($_SESSION['titulos'])) $this->loadMenu ();
         $_SESSION['count_libros'] = count($_SESSION['libros']);
         if($_SESSION['count_libros']==0){
             $_SESSION['not_found']='No hay resultados con esa busqueda';
-            $this->goIndexUrl();
+            $this->goIndex();
             return;
         }
         else{
@@ -136,7 +125,7 @@ class View {
     
     function Autors($nameAutor){
         include_once 'Controller/Client.php';
-        $file = "View/autor.php";
+        $file = "View/newindex.php";
 
         $_SESSION['libros'] = getallautor($nameAutor);
         if(!isset($_SESSION['temas']) OR !isset($_SESSION['autores']) OR !isset($_SESSION['titulos'])) $this->loadMenu ();
@@ -161,7 +150,7 @@ class View {
      */
     function Titulos($nameTitulo){
         include_once 'Controller/Client.php';
-        $file = "View/libro.php";
+        $file = "View/newindex.php";
 
         $_SESSION['libros'] = getalltitulo($nameTitulo);
         if(!isset($_SESSION['temas']) OR !isset($_SESSION['autores']) OR !isset($_SESSION['titulos'])) $this->loadMenu ();
@@ -184,13 +173,13 @@ class View {
     
     function Clasificacion($option){
         include_once 'Controller/Client.php';
-        $file = "View/temas.php";
+        $file = "View/newindex.php";
         $_SESSION['libros'] = getbooksTheme($theme);
         if(!isset($_SESSION['temas']) OR !isset($_SESSION['autores']) OR !isset($_SESSION['titulos'])) $this->loadMenu ();
         $_SESSION['count_libros'] = count($_SESSION['libros']);
         if($_SESSION['count_libros']==0){
             $_SESSION['not_found']='No hay resultados con esa busqueda';
-            $this->goIndexUrl();
+            $this->goIndex();
             return;
         }
         else{

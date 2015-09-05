@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
+    <head>
     <?php 
-    include_once 'View/headurl.php'; 
+    //include_once '../View/headurl.php'; 
     ?>
-</head>
+    <!--<link rel="stylesheet" href="../css/yolandalee.css"/> Asi si q encuentra el fichero-->
+    <meta name="viewport" content="width=device-widht, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimum-scale=1.0">
+    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+    <link rel="stylesheet" href="../bs/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/yolandalee.css"/>
+    <script type="text/javascript" src="../js/yolandalee.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../css/jquery-ui.css"/>
+    <link rel="stylesheet" href="../css/jquery-ui.theme.css">
+    </head>
 <body>
     <header>  
         <nav class="navbar navbar-default navbar-fixed-top navbar transparent">
@@ -61,9 +71,10 @@
                 <a href="./Clasificacion/B">B</a> , 
                 <a href="./Clasificacion/C">C</a> , 
                 <a href="./Clasificacion/D">D</a> , 
-                <a href="./Clasificacion/E">E</a><br><br><br><br>
+                <a href="./Clasificacion/E">E</a> ,
+                <a href="./Clasificacion/E">estas en new index</a><br><br><br><br>
      
-                <div>Temas</div><br>
+                <div class="flas">Temas</div><br>
                 <?php
                 for($x=0; $x<2;$x++){
                     if(isset($_SESSION['temas'])){
@@ -107,7 +118,53 @@
                 
             </div>
             <div>
-                <?php include_once "View/listbooks.php"; ?>
+                <div class="container"><?php
+                    if(isset($_SESSION['libros'])){
+
+                        if(isset($_SESSION['not_found']) AND !$_SESSION['not_found']==''){
+                            echo '<div class="col-xs-12 col-sm-9 col-md-9 librosFound">';
+                            echo '<h3>'.$_SESSION['not_found'].'</h3>';
+                            echo '<br></div>';
+                        }
+                        else{
+                            echo '<div class="col-xs-12 col-sm-9 col-md-9 librosFound">';
+                            echo '<h3>Hay '.count($_SESSION['libros']).' libros</h3>';
+                            echo '<br></div>';
+                        }
+
+                        if(!isset($_SESSION['num_pag'])){
+                            $_SESSION['num_pag']=6;
+                        }
+
+                        $_SESSION['contar_libs_pag'] = 0;
+
+                        foreach ($_SESSION['libros'] as $b) {
+
+                            if($_SESSION['contar_libs_pag'] >= $_SESSION['num_pag'] - 6 AND $_SESSION['contar_libs_pag'] < $_SESSION['num_pag']){
+                                echo '<div class="col-xs-12 col-sm- col-md-4 bordearLibro col-md-push-1 col-sm-push-1" >';
+                                echo '<br><div class="links">Titulo : '. $b->tittle .'<br>';
+                                echo 'Autor : '. $b->autor .'<br>';
+                                echo 'Valoracion : '. $b->valoration .'<br>';
+                                echo 'tema : '. $b->tema .'</div><br>';
+                                echo '<div style="background-image: url(img/'.$b->picture.'.PNG);" class="fondoLibro" ></div>';
+                                echo '<strong><div class="text-justify textoLibro">'.$b->coment.'</div></strong>';
+                                echo '</div>';
+                            }
+                            else{
+                                if($_SESSION['num_pag'] - 6 > 0) $_SESSION['disableless'] = false;
+                                else $_SESSION['disableless'] = true;
+
+                                if($_SESSION['num_pag']+6 < $_SESSION['count_libros'] +6) $_SESSION['disablemore'] = false;
+                                else $_SESSION['disablemore'] = true;
+                            }
+                              $_SESSION['contar_libs_pag']++;
+
+                        }
+                        $_SESSION['not_found']='';
+                    }
+                    $_SESSION['not_found']='';
+                    ?>
+                    </div>
             </div>
             
         </div>
