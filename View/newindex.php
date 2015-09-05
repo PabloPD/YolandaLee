@@ -66,7 +66,7 @@
                 <a href="./Clasificacion/E">E</a> ,
                 <a href="./Clasificacion/E">estas en new index</a><br><br><br><br>
      
-                <div class="flas">Temas</div><br>
+                <div>Temas</div><br>
                 <?php
                 for($x=0; $x<2;$x++){
                     if(isset($_SESSION['temas'])){
