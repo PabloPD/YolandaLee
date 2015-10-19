@@ -56,14 +56,15 @@
         <div class="row">
             <br><br>   
              
-            <div class="col-sm-2 col-md-2 hidden-xs borderright"> 
-                <a href=".">Clasificacion A-E</a><br><br>
-                <a href=".">Clasificacion E-A</a><br><br>
+            <div class="col-sm-2 col-md-2 hidden-xs borderright">
+                <a href="../">Inicio</a><br>
+                <a href=".">Clasificacion A-E</a><br>
+                <a href=".">Clasificacion E-A</a><br>
                 <a href="./Clasificacion/A">A</a> , 
                 <a href="./Clasificacion/B">B</a> , 
                 <a href="./Clasificacion/C">C</a> , 
                 <a href="./Clasificacion/D">D</a> , 
-                <a href="./Clasificacion/E">E</a> <br><br><br><br> ,
+                <a href="./Clasificacion/E">E</a> <br><br><br> ,
      
                 <div>Temas</div><br>
                 <?php
@@ -156,6 +157,30 @@
         ?>
     </div>
     <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div id='botonera'>
+                    <input id="botonIniciar" type='button' value = 'Iniciar'></input>
+                    <input id='botonDetener' type='button' value = 'Detener'></input>
+                    <input id='botonFoto' type='button' value = 'Foto'></input>
+                </div>
+                <div class="contenedor">
+                    <div class="titulo">Cámara</div>
+                    <video id="camara" autoplay controls></video>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="contenedor">
+                    <div class="titulo">Foto</div>
+                    <canvas id="foto" ></canvas>
+                </div>
+            </div>
+        </div>    
+    </div>
     
     <script type="text/javascript" src="bs/js/bootstrap.min.js"></script> 
 </body>
